@@ -14,3 +14,5 @@ You should make sure you keep your project root files up-to-date. Information fo
 
 ## Code Contribution
 Individual code contribution will be used to evaluate individual contribution to the project.
+
+![d30198ca001eb8de84e07a6ca2ac2d0](https://github.com/user-attachments/assets/2729e762-8036-479d-91b3-6fbd908cc2f9)
