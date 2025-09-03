@@ -13,7 +13,7 @@
 | Member2     |     Tianxiang Wu       |
 | Member2     |  tw50@illinois.edu     |
 | Member3     |       Zixuan Huang     |
-| Member3     | zixuan23@illinois,edu  |
+| Member3     | zixuan23@illinois.edu  |
 
 ## Project Information
 
