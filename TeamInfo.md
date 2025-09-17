@@ -17,18 +17,13 @@
 
 ## Project Information
 
-|   Info      |        Description     |
-| ----------- | ---------------------- |
-|  Title      |       ProjectTitle     |
-| System URL  |      link_to_system    |
-| Video Link  |      link_to_video     |
+|   Info      |        Description                                    |
+| ----------- | ----------------------------------------------------- |
+|  Title      |      College Employment & Salary Analysis Platform    |
+| System URL  |      link_to_system                                   |
+| Video Link  |      link_to_video                                    |
 
 ## Project Summary
-
-Title: 
-College Employment & Salary Analysis Platform
-
-Project Summary:
 Choosing a college major and university is one of the most significant financial and career decisions for students and their families. However, current resources often emphasize prestige-based rankings (such as US News) rather than concrete outcomes like employment rates and post-graduation salaries. In our project, we will address this problem by building a web-based analysis platform that integrates the real world datasets: the U.S. Department of Education’s College Scorecard (covering tuition, majors, and alumni salaries) with job and salary data from Kaggle/Glassdoor.
 
 This platform will allow users to  explore how different majors and universities compare in terms of the salary. For instance, a student can search for “Computer Science” graduates at Illinois, compare their average salary with similar programs at MIT or Purdue, and weigh the results against tuition costs. 
