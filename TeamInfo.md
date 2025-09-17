@@ -66,9 +66,9 @@ By combining these datasets, we can cross-reference educational inputs (tuition,
 
 **Comparison Dashboard:** The comparison page allows users to select two schools/majors side by side. For each program, tuition, graduation rate, and salary data are shown in a structured column layout. Simple charts below provide quick visual comparisons. A button at the top lets users save the comparison to their account for future reference, a navigation button goes to the comparison board, and another navigation button returns to the homepage. This page emphasizes ROI comparison across institutions.
 
-##### User Account Page
-**Bookmarks & Saved Comparisons:** Users can view saved schools, majors, or comparisons. Each entry lists details (school, major, salary, grad rate) with delete buttons on the right for removing items.
-**Account Settings:** Users can edit personal details such as username, email, preferred school/major, and job interests.
+**User Account Page**
+Bookmarks & Saved Comparisons: Users can view saved schools, majors, or comparisons. Each entry lists details (school, major, salary, grad rate) with delete buttons on the right for removing items.
+Account Settings: Users can edit personal details such as username, email, preferred school/major, and job interests.
 
 
 
