@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Program Explorer</h1>
+        <p>Search programs and manage bookmarks (GCP + Flask + MySQL)</p>
+    </header>
+
+    <main>
+        <!-- 搜索区域 -->
+        <section class="card">
+            <h2>Search Programs</h2>
+            <div class="form-row">
+                <label>
+                    Major:
+                    <input id="majorInput" placeholder="e.g. Computer Science">
+                </label>
+                <label>
+                    Location:
+                    <input id="locationInput" placeholder="e.g. IL">
+                </label>
+                <button onclick="searchPrograms()">Search</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Location</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median Salary</th>
+                        <th>Bookmark</th>
+                    </tr>
+                </thead>
+                <tbody id="programTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- 书签区域 -->
+        <section class="card">
+            <h2>User Bookmarks</h2>
+            <div class="form-row">
+                <label>
+                    UserID:
+                    <!-- 为简单起见，默认 1；你可以改成输入框 or 登录系统 -->
+                    <input id="userIdInput" value="1">
+                </label>
+                <button onclick="loadBookmarks()">Load Bookmarks</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median Salary</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="bookmarkTableBody"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Status</h2>
+            <pre id="statusBox">Ready.</pre>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

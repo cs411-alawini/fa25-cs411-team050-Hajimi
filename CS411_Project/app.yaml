@@ -1,0 +1,8 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  DB_HOST: "你的数据库host，比如 34.xxx.xxx.xxx"
+  DB_USER: "你的数据库用户名"
+  DB_PASSWORD: "你的数据库密码"
+  DB_NAME: "你的数据库名"

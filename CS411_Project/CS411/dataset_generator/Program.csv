@@ -1,0 +1,1001 @@
+1,B.A. in Communication Studies,70,18,147571,PhD
+2,B.S. in Materials Science and Engineering,57,1,71615,MBA
+3,M.S. in Mechanical Engineering,7,6,145787,MS
+4,MBA in Entrepreneurship,80,24,89803,MEng
+5,M.S. in Data Science,65,23,105987,MEng
+6,B.B.A. in Accounting,62,4,142507,MS
+7,M.S. in Data Science,65,18,135818,PhD
+8,B.B.A. in Accounting,11,4,134011,MEng
+9,B.S. in Civil Engineering,44,24,145039,MEng
+10,M.S. in Civil and Environmental Engineering,60,29,149787,PhD
+11,B.B.A. in Accounting,51,17,56349,PhD
+12,B.A. in Philosophy,62,12,145154,MBA
+13,B.A. in International Relations,45,1,115212,BEng
+14,B.S. in Computer Science,37,12,123335,MBA
+15,M.S. in Computer Science,46,10,68372,PhD
+16,B.B.A. in Marketing,5,16,141329,MS
+17,Ph.D. in Psychology,21,9,141063,MS
+18,M.S. in Industrial Engineering,24,20,86588,PhD
+19,B.B.A. in Finance,78,3,129371,MEng
+20,B.A. in Psychology,64,18,77475,BS
+21,B.A. in Linguistics,74,30,123047,MS
+22,B.S. in Computer Science,22,25,146913,MEng
+23,B.S. in Industrial Engineering,65,2,54255,MS
+24,Ph.D. in Economics,65,2,85221,BS
+25,MBA in Operations Management,17,4,117175,BS
+26,M.S. in Industrial Engineering,48,7,141546,BS
+27,B.S. in Electrical Engineering,28,13,85594,BS
+28,B.A. in Linguistics,47,21,134855,MEng
+29,B.B.A. in Finance,79,24,147585,BEng
+30,B.S. in Civil Engineering,38,24,61793,MS
+31,B.A. in International Relations,53,3,79095,MBA
+32,B.A. in Linguistics,29,22,121909,MBA
+33,M.S. in Computer Science,20,30,87597,MS
+34,M.S. in Business Analytics,65,3,128832,BS
+35,B.S. in Biomedical Engineering,41,30,141480,BEng
+36,MBA in Strategic Management,75,9,92770,MS
+37,M.S. in Electrical and Computer Engineering,64,8,85604,MS
+38,B.S. in Applied Mathematics,48,24,145360,MEng
+39,Ph.D. in Electrical Engineering,11,8,141482,BS
+40,B.B.A. in Marketing,23,15,132691,BS
+41,M.S. in Finance,2,1,86910,MEng
+42,B.S. in Mechanical Engineering,64,30,97051,MEng
+43,B.A. in Economics,78,19,121173,BS
+44,B.B.A. in Finance,80,7,66649,MS
+45,B.A. in Sociology,80,28,73235,BEng
+46,Ph.D. in Electrical Engineering,62,9,57764,BS
+47,M.S. in Industrial Engineering,80,28,77421,PhD
+48,B.S. in Industrial Engineering,9,9,50075,BS
+49,B.S. in Industrial Engineering,21,5,115037,MEng
+50,B.S. in Environmental Engineering,16,2,95307,MBA
+51,M.S. in Statistics,10,9,122242,MS
+52,B.S. in Mechanical Engineering,81,3,92774,MS
+53,B.A. in Linguistics,1,29,59344,PhD
+54,B.A. in Philosophy,79,8,144597,MBA
+55,B.S. in Biomedical Engineering,6,1,106428,BEng
+56,M.S. in Mechanical Engineering,53,8,125708,MS
+57,Ph.D. in Mechanical Engineering,74,23,142443,BS
+58,B.S. in Environmental Engineering,37,17,92707,MS
+59,Ph.D. in Economics,24,12,55127,MS
+60,B.A. in Economics,38,16,73539,MS
+61,M.S. in Business Analytics,54,26,118037,PhD
+62,Ph.D. in Economics,66,4,111590,BS
+63,B.S. in Materials Science and Engineering,20,17,88578,BS
+64,B.S. in Applied Mathematics,1,3,148208,BS
+65,B.A. in Sociology,71,23,144172,BEng
+66,B.A. in Sociology,5,20,76127,MEng
+67,M.S. in Mechanical Engineering,60,19,126207,MS
+68,B.S. in Industrial Engineering,77,28,114354,PhD
+69,B.B.A. in Supply Chain Management,2,24,58220,MEng
+70,B.A. in Linguistics,73,13,119633,MEng
+71,B.A. in Economics,46,28,139022,MBA
+72,B.S. in Electrical Engineering,71,15,122218,BS
+73,B.B.A. in Accounting,9,10,93703,MEng
+74,B.A. in Sociology,69,4,68001,MBA
+75,B.S. in Mechanical Engineering,70,21,76409,MEng
+76,B.A. in Psychology,45,18,107081,BS
+77,M.S. in Industrial Engineering,23,10,91681,MEng
+78,B.A. in Communication Studies,30,28,123900,PhD
+79,B.A. in History,55,26,102953,BS
+80,B.S. in Computer Science,64,5,122173,BS
+81,M.S. in Finance,20,23,83282,BS
+82,M.S. in Electrical and Computer Engineering,14,5,56508,BS
+83,MBA in Marketing,33,2,114898,BS
+84,M.S. in Industrial Engineering,33,15,77621,MEng
+85,Ph.D. in Electrical Engineering,72,15,131915,BS
+86,M.S. in Finance,64,15,112901,MEng
+87,M.S. in Finance,63,6,133888,MEng
+88,M.S. in Civil and Environmental Engineering,51,24,56210,MEng
+89,B.S. in Mechanical Engineering,12,23,143577,BS
+90,B.B.A. in Marketing,33,15,109406,MEng
+91,M.Eng. in Mechanical Engineering,81,16,69835,BS
+92,B.A. in Linguistics,44,26,102544,PhD
+93,B.S. in Civil Engineering,9,27,128734,PhD
+94,B.S. in Electrical Engineering,61,6,71195,BS
+95,B.A. in Sociology,17,9,58894,BEng
+96,B.B.A. in Marketing,48,7,140007,MBA
+97,B.B.A. in Finance,28,24,97770,PhD
+98,M.S. in Finance,35,10,136905,MS
+99,B.A. in Economics,70,7,120363,BS
+100,M.S. in Civil and Environmental Engineering,76,29,109818,MS
+101,B.A. in Philosophy,1,15,131340,MBA
+102,M.S. in Data Science,47,17,121956,MS
+103,M.S. in Electrical and Computer Engineering,63,19,75296,MBA
+104,M.S. in Industrial Engineering,35,29,66642,MEng
+105,Ph.D. in Economics,66,10,108878,PhD
+106,B.B.A. in Accounting,48,20,106484,MS
+107,B.S. in Computer Science,28,2,87674,BS
+108,MBA in Entrepreneurship,69,19,115243,BEng
+109,B.B.A. in Supply Chain Management,37,12,77994,BEng
+110,Ph.D. in Mechanical Engineering,79,4,135942,BEng
+111,B.A. in Economics,53,15,62420,MEng
+112,M.S. in Electrical and Computer Engineering,72,27,106769,BEng
+113,Ph.D. in Economics,28,23,130617,BEng
+114,B.A. in International Relations,70,9,74327,MBA
+115,B.S. in Applied Mathematics,2,21,141725,MS
+116,B.S. in Materials Science and Engineering,16,17,87307,BS
+117,B.A. in Linguistics,12,22,92147,MBA
+118,B.S. in Industrial Engineering,10,10,62687,MBA
+119,B.S. in Computer Science,42,28,106306,PhD
+120,B.S. in Applied Mathematics,38,29,126654,PhD
+121,M.S. in Computer Science,71,11,110212,BS
+122,B.S. in Civil Engineering,44,11,96707,BS
+123,B.S. in Materials Science and Engineering,67,1,54435,MBA
+124,B.A. in Linguistics,73,2,66226,BEng
+125,B.S. in Biomedical Engineering,59,29,94653,BS
+126,Ph.D. in Electrical Engineering,15,17,143670,BS
+127,B.A. in Linguistics,28,3,118431,MEng
+128,B.A. in Psychology,79,30,118231,PhD
+129,B.S. in Environmental Engineering,38,5,115759,BEng
+130,MBA in Entrepreneurship,11,25,62671,MEng
+131,B.A. in Economics,28,26,143437,BS
+132,B.B.A. in Finance,29,30,125323,PhD
+133,B.A. in Psychology,68,17,116344,BS
+134,B.A. in Linguistics,58,4,72381,BS
+135,M.S. in Business Analytics,41,25,116220,MBA
+136,Ph.D. in Mechanical Engineering,42,7,72949,BEng
+137,B.S. in Mechanical Engineering,42,26,67394,MEng
+138,M.S. in Industrial Engineering,66,9,96146,PhD
+139,M.Eng. in Electrical Engineering,11,16,142288,PhD
+140,B.B.A. in Marketing,3,19,80979,BS
+141,M.S. in Statistics,73,4,100500,PhD
+142,M.S. in Industrial Engineering,6,25,74026,PhD
+143,B.A. in Linguistics,53,6,125719,BEng
+144,M.S. in Computer Science,37,15,69229,BS
+145,B.A. in Communication Studies,7,6,121563,MBA
+146,B.S. in Materials Science and Engineering,47,21,87342,PhD
+147,Ph.D. in Electrical Engineering,3,7,114154,BEng
+148,MBA in Entrepreneurship,20,26,80637,MEng
+149,M.Eng. in Materials Science,75,19,83725,BS
+150,B.A. in Communication Studies,39,21,149653,MEng
+151,M.S. in Industrial Engineering,39,28,73855,MBA
+152,B.B.A. in Marketing,1,17,146571,BEng
+153,B.B.A. in Marketing,52,15,63993,MBA
+154,M.S. in Data Science,44,30,138485,BS
+155,B.S. in Data Science,54,29,143034,PhD
+156,B.A. in Psychology,41,5,60055,PhD
+157,Ph.D. in Electrical Engineering,11,27,73442,BS
+158,Ph.D. in Electrical Engineering,53,30,86221,MEng
+159,B.A. in Linguistics,73,14,68926,MS
+160,M.S. in Finance,33,28,126721,PhD
+161,B.S. in Biomedical Engineering,8,29,78581,MBA
+162,B.S. in Civil Engineering,66,9,143269,BEng
+163,Ph.D. in Economics,23,12,136138,MEng
+164,B.S. in Electrical Engineering,37,20,137935,MS
+165,B.B.A. in Finance,38,12,68036,BEng
+166,M.S. in Civil and Environmental Engineering,48,30,141566,MS
+167,M.S. in Data Science,61,14,50118,BEng
+168,MBA in Entrepreneurship,66,6,77393,MEng
+169,B.S. in Computer Science,50,6,96289,MBA
+170,B.A. in Psychology,40,9,86236,MBA
+171,B.A. in Sociology,60,2,80024,MBA
+172,M.S. in Data Science,34,24,115652,MS
+173,B.B.A. in Supply Chain Management,55,1,62475,BS
+174,M.S. in Data Science,45,4,56004,BS
+175,B.B.A. in Finance,61,12,135606,MEng
+176,M.Eng. in Mechanical Engineering,13,17,105710,PhD
+177,B.S. in Civil Engineering,51,15,127441,BEng
+178,B.B.A. in Marketing,41,16,133858,PhD
+179,M.S. in Industrial Engineering,57,3,120505,BEng
+180,MBA in Operations Management,29,9,86374,PhD
+181,Ph.D. in Psychology,59,19,76139,MBA
+182,B.S. in Mechanical Engineering,60,23,139902,MBA
+183,B.S. in Computer Science,9,10,59240,BEng
+184,M.S. in Mechanical Engineering,4,14,82630,MS
+185,B.S. in Industrial Engineering,8,15,121784,BEng
+186,B.S. in Industrial Engineering,12,7,118487,PhD
+187,B.B.A. in Finance,65,27,55599,BS
+188,B.A. in Economics,36,14,110376,MS
+189,B.S. in Computer Science,66,18,140346,BEng
+190,B.B.A. in Marketing,44,3,59921,BS
+191,B.S. in Applied Mathematics,72,19,92354,BEng
+192,M.S. in Business Analytics,15,2,85620,MS
+193,B.S. in Mechanical Engineering,79,23,127289,BS
+194,M.S. in Industrial Engineering,27,7,68370,PhD
+195,B.B.A. in Marketing,30,3,60247,BEng
+196,MBA in Operations Management,8,8,63848,PhD
+197,Ph.D. in Mechanical Engineering,38,17,76184,MS
+198,M.S. in Industrial Engineering,1,27,120098,MBA
+199,MBA in Operations Management,67,4,78311,PhD
+200,Ph.D. in Electrical Engineering,14,15,53657,MS
+201,MBA in Marketing,15,14,68435,MBA
+202,M.S. in Business Analytics,18,28,80806,MEng
+203,B.S. in Civil Engineering,53,5,106154,BEng
+204,B.B.A. in Marketing,15,5,70278,BS
+205,Ph.D. in Mechanical Engineering,9,30,102683,MS
+206,M.Eng. in Materials Science,68,8,50624,BEng
+207,B.S. in Computer Science,35,8,64428,MEng
+208,M.Eng. in Materials Science,13,24,138593,MS
+209,MBA in Operations Management,77,17,108927,MS
+210,B.S. in Environmental Engineering,38,23,107224,BEng
+211,Ph.D. in Mechanical Engineering,44,3,126564,MS
+212,M.Eng. in Materials Science,11,8,80883,MEng
+213,M.S. in Statistics,3,15,64181,PhD
+214,M.S. in Statistics,16,25,131966,MEng
+215,B.S. in Industrial Engineering,37,13,121405,MS
+216,B.A. in International Relations,46,22,107009,MS
+217,B.S. in Applied Mathematics,11,9,132036,BEng
+218,M.Eng. in Electrical Engineering,55,4,131693,PhD
+219,Ph.D. in Economics,37,1,142204,BEng
+220,B.A. in Psychology,67,28,71597,PhD
+221,B.A. in Linguistics,3,30,115903,BEng
+222,B.B.A. in Finance,52,20,125495,MEng
+223,B.S. in Applied Mathematics,45,30,84771,PhD
+224,B.B.A. in Accounting,54,6,56380,MEng
+225,M.S. in Finance,24,12,103806,PhD
+226,B.S. in Applied Mathematics,30,14,126371,MS
+227,B.A. in Linguistics,24,27,86010,MBA
+228,B.S. in Civil Engineering,46,26,80659,MBA
+229,M.Eng. in Materials Science,76,6,91026,MS
+230,B.A. in Philosophy,57,26,101778,PhD
+231,B.B.A. in Supply Chain Management,55,1,96320,MEng
+232,MBA in Marketing,70,29,115389,MBA
+233,Ph.D. in Electrical Engineering,27,10,129568,PhD
+234,M.S. in Computer Science,24,10,88755,MEng
+235,M.S. in Statistics,62,22,63353,MEng
+236,Ph.D. in Electrical Engineering,66,6,147884,MBA
+237,Ph.D. in Electrical Engineering,51,8,117873,MBA
+238,MBA in Operations Management,39,22,76045,PhD
+239,M.S. in Civil and Environmental Engineering,30,10,111146,BS
+240,Ph.D. in Psychology,7,9,145317,BEng
+241,M.S. in Industrial Engineering,64,7,68986,BEng
+242,B.S. in Environmental Engineering,43,9,137046,MEng
+243,MBA in Strategic Management,75,26,113142,PhD
+244,B.S. in Biomedical Engineering,69,29,135872,MS
+245,B.S. in Applied Mathematics,26,30,122445,BEng
+246,M.Eng. in Electrical Engineering,22,14,145730,PhD
+247,B.B.A. in Accounting,53,30,52580,MBA
+248,M.S. in Mechanical Engineering,31,22,54842,MS
+249,B.S. in Industrial Engineering,75,5,80726,MBA
+250,B.B.A. in Marketing,48,28,95985,MEng
+251,Ph.D. in Mechanical Engineering,18,22,98224,BS
+252,M.S. in Civil and Environmental Engineering,29,2,79588,MS
+253,M.S. in Business Analytics,30,24,140000,MBA
+254,B.B.A. in Marketing,21,6,119891,MEng
+255,M.S. in Finance,11,23,98171,PhD
+256,M.S. in Data Science,57,29,104123,MBA
+257,B.S. in Materials Science and Engineering,62,16,114697,MEng
+258,M.S. in Mechanical Engineering,15,27,131612,PhD
+259,M.Eng. in Mechanical Engineering,34,15,73742,BEng
+260,B.S. in Applied Mathematics,43,21,143849,MS
+261,B.A. in Sociology,34,16,146712,PhD
+262,B.B.A. in Supply Chain Management,67,23,142578,MEng
+263,M.S. in Industrial Engineering,26,10,57269,BEng
+264,M.S. in Data Science,66,1,74557,MEng
+265,M.S. in Finance,63,8,122035,PhD
+266,Ph.D. in Mechanical Engineering,40,5,143190,PhD
+267,M.Eng. in Electrical Engineering,42,6,61636,MBA
+268,M.S. in Mechanical Engineering,31,4,145882,MBA
+269,Ph.D. in Mechanical Engineering,49,17,82682,BEng
+270,Ph.D. in Psychology,7,6,107701,BS
+271,M.S. in Business Analytics,57,5,144894,MBA
+272,B.S. in Industrial Engineering,58,24,52426,BEng
+273,Ph.D. in Mechanical Engineering,56,4,95567,MEng
+274,M.Eng. in Materials Science,75,21,106417,MS
+275,B.A. in Linguistics,31,30,67506,BEng
+276,B.S. in Computer Science,76,15,94838,MS
+277,M.S. in Industrial Engineering,68,19,124127,BS
+278,B.S. in Civil Engineering,60,13,103849,MS
+279,Ph.D. in Psychology,42,8,93776,BS
+280,M.S. in Industrial Engineering,33,15,77643,BEng
+281,B.S. in Electrical Engineering,30,4,88990,MEng
+282,B.S. in Mechanical Engineering,11,5,143398,BS
+283,M.S. in Business Analytics,27,29,142700,MBA
+284,Ph.D. in Economics,65,1,91101,MEng
+285,B.S. in Biomedical Engineering,39,22,59785,MS
+286,B.A. in Linguistics,12,22,93449,MEng
+287,B.S. in Mechanical Engineering,33,20,85405,PhD
+288,B.S. in Industrial Engineering,66,21,83523,MS
+289,M.S. in Data Science,44,21,64268,BS
+290,B.S. in Mechanical Engineering,34,15,112189,BS
+291,B.A. in International Relations,11,28,122156,BEng
+292,B.A. in Communication Studies,8,13,75178,PhD
+293,B.A. in Psychology,27,3,141468,MS
+294,Ph.D. in Psychology,20,28,102283,PhD
+295,M.S. in Business Analytics,56,23,94933,MEng
+296,B.A. in Psychology,26,14,79771,MS
+297,B.S. in Biomedical Engineering,37,24,139256,PhD
+298,B.B.A. in Accounting,58,23,75691,PhD
+299,B.A. in Communication Studies,73,2,79524,MBA
+300,B.A. in Psychology,69,15,138147,MS
+301,B.A. in Linguistics,36,18,84799,MBA
+302,B.S. in Industrial Engineering,60,14,52846,PhD
+303,M.S. in Computer Science,31,13,60488,PhD
+304,B.A. in Linguistics,22,4,116290,MBA
+305,B.A. in Psychology,69,5,79283,MEng
+306,M.S. in Electrical and Computer Engineering,63,30,79941,MEng
+307,M.S. in Computer Science,42,22,133674,BEng
+308,B.S. in Materials Science and Engineering,72,20,70176,MEng
+309,M.S. in Civil and Environmental Engineering,59,7,89367,MBA
+310,M.S. in Statistics,21,29,114763,MS
+311,M.S. in Civil and Environmental Engineering,54,8,88561,BEng
+312,B.S. in Civil Engineering,7,24,72668,BS
+313,M.Eng. in Electrical Engineering,61,30,70340,MS
+314,B.A. in Philosophy,44,3,126488,MBA
+315,M.Eng. in Mechanical Engineering,62,11,130863,MS
+316,M.S. in Mechanical Engineering,29,29,68307,BEng
+317,B.A. in International Relations,39,11,75886,PhD
+318,M.S. in Finance,52,20,67899,MBA
+319,M.Eng. in Materials Science,75,18,57757,MBA
+320,M.S. in Finance,69,17,59174,BS
+321,B.A. in Communication Studies,16,27,130063,MS
+322,M.Eng. in Materials Science,23,11,87072,BEng
+323,B.S. in Biomedical Engineering,44,16,104725,PhD
+324,B.A. in History,56,13,55166,MBA
+325,B.A. in Philosophy,7,7,139055,BEng
+326,M.S. in Finance,44,16,117749,BS
+327,MBA in Entrepreneurship,64,13,98490,BS
+328,B.S. in Computer Science,62,20,79109,MBA
+329,B.A. in Psychology,65,9,66013,PhD
+330,B.S. in Mechanical Engineering,28,16,88637,MS
+331,M.Eng. in Electrical Engineering,18,28,71102,BS
+332,M.Eng. in Mechanical Engineering,59,21,61874,BS
+333,B.S. in Electrical Engineering,50,10,76407,PhD
+334,M.S. in Mechanical Engineering,15,6,103179,BEng
+335,M.Eng. in Electrical Engineering,58,10,129645,MS
+336,M.S. in Business Analytics,3,16,127288,PhD
+337,Ph.D. in Electrical Engineering,9,7,145325,BEng
+338,B.S. in Mechanical Engineering,31,9,118041,MEng
+339,B.S. in Industrial Engineering,57,7,137270,PhD
+340,Ph.D. in Economics,2,8,135550,BS
+341,M.Eng. in Mechanical Engineering,75,13,61340,PhD
+342,B.S. in Industrial Engineering,76,7,104315,BEng
+343,B.B.A. in Accounting,43,18,105635,BS
+344,M.S. in Data Science,74,26,87828,MEng
+345,MBA in Entrepreneurship,39,28,125087,BS
+346,Ph.D. in Economics,18,20,56226,BS
+347,B.S. in Mechanical Engineering,51,3,139460,MEng
+348,B.S. in Environmental Engineering,33,12,86907,MEng
+349,Ph.D. in Mechanical Engineering,1,26,130310,BEng
+350,Ph.D. in Psychology,56,13,58376,MBA
+351,B.B.A. in Marketing,36,28,102851,MBA
+352,MBA in Strategic Management,10,25,89830,MEng
+353,M.Eng. in Electrical Engineering,44,24,79504,MS
+354,B.S. in Environmental Engineering,66,12,60880,BS
+355,B.S. in Computer Science,39,27,55038,MBA
+356,M.S. in Finance,7,26,95919,BEng
+357,B.S. in Environmental Engineering,60,19,95508,MS
+358,B.S. in Electrical Engineering,63,17,96665,PhD
+359,MBA in Marketing,35,19,130966,BEng
+360,B.B.A. in Marketing,56,28,124079,PhD
+361,B.A. in Psychology,19,27,67524,MBA
+362,B.A. in Linguistics,58,19,148400,MBA
+363,MBA in Marketing,66,20,67631,PhD
+364,B.A. in History,1,14,147802,MBA
+365,B.B.A. in Finance,25,19,73282,PhD
+366,B.S. in Environmental Engineering,39,27,54085,BS
+367,B.S. in Biomedical Engineering,17,10,103744,PhD
+368,B.A. in Linguistics,35,1,91358,MEng
+369,B.A. in History,52,17,51948,BEng
+370,B.S. in Electrical Engineering,55,2,71303,MEng
+371,B.S. in Civil Engineering,26,25,111993,BS
+372,MBA in Entrepreneurship,17,19,127285,BS
+373,M.S. in Computer Science,39,24,74850,MEng
+374,B.S. in Biomedical Engineering,24,17,62286,BEng
+375,B.B.A. in Accounting,42,23,60524,MS
+376,MBA in Operations Management,47,4,110237,MS
+377,M.S. in Data Science,40,28,120539,MBA
+378,M.S. in Business Analytics,20,29,70665,BEng
+379,B.B.A. in Finance,61,16,118873,BEng
+380,B.B.A. in Marketing,79,10,107073,MEng
+381,B.A. in Philosophy,38,26,84427,MEng
+382,B.B.A. in Supply Chain Management,18,28,79013,BS
+383,M.Eng. in Mechanical Engineering,17,6,71798,MBA
+384,B.S. in Mechanical Engineering,2,2,104449,MS
+385,B.S. in Computer Science,4,24,60757,BS
+386,M.Eng. in Materials Science,46,10,102835,MBA
+387,MBA in Operations Management,21,24,143068,MBA
+388,Ph.D. in Economics,60,14,89085,BEng
+389,B.A. in History,67,16,90261,BS
+390,MBA in Marketing,81,9,97123,PhD
+391,B.S. in Electrical Engineering,38,30,120248,BS
+392,Ph.D. in Psychology,66,6,64251,BS
+393,B.A. in Sociology,77,5,53651,MBA
+394,Ph.D. in Psychology,1,19,133850,MS
+395,B.S. in Environmental Engineering,13,21,112767,MBA
+396,B.A. in History,24,30,130852,MBA
+397,MBA in Strategic Management,70,18,147102,MEng
+398,MBA in Entrepreneurship,32,27,124491,BEng
+399,Ph.D. in Economics,27,24,143075,MEng
+400,Ph.D. in Psychology,25,12,141665,BEng
+401,M.S. in Industrial Engineering,3,17,101805,BS
+402,B.B.A. in Supply Chain Management,7,4,142811,MEng
+403,B.A. in International Relations,28,24,125419,MBA
+404,B.S. in Data Science,49,8,136460,MS
+405,B.A. in International Relations,20,9,122151,MS
+406,B.B.A. in Accounting,1,17,85995,BS
+407,B.B.A. in Marketing,74,18,128178,PhD
+408,M.S. in Computer Science,31,30,145580,PhD
+409,B.S. in Environmental Engineering,32,24,102160,BS
+410,Ph.D. in Electrical Engineering,12,19,126042,MBA
+411,B.A. in International Relations,62,24,108499,BS
+412,M.S. in Statistics,79,8,133638,MBA
+413,B.B.A. in Finance,27,3,76341,MEng
+414,B.S. in Electrical Engineering,79,12,147536,BEng
+415,B.B.A. in Finance,21,11,144464,MEng
+416,B.A. in Philosophy,61,1,111236,MEng
+417,B.S. in Data Science,8,27,56998,BS
+418,M.Eng. in Mechanical Engineering,42,30,132402,MBA
+419,MBA in Entrepreneurship,20,6,54697,BEng
+420,B.S. in Materials Science and Engineering,62,7,102569,BS
+421,M.S. in Computer Science,5,28,107098,BEng
+422,B.A. in Psychology,66,2,88202,PhD
+423,Ph.D. in Computer Science,7,18,65501,BEng
+424,MBA in Entrepreneurship,42,23,54336,MS
+425,B.A. in Psychology,64,10,127699,BEng
+426,B.A. in Communication Studies,68,2,54472,MEng
+427,Ph.D. in Electrical Engineering,22,20,104832,BEng
+428,MBA in Entrepreneurship,47,2,119221,PhD
+429,Ph.D. in Electrical Engineering,21,18,51073,MEng
+430,B.S. in Environmental Engineering,48,5,89946,MEng
+431,B.A. in Communication Studies,67,10,93642,BS
+432,B.S. in Materials Science and Engineering,18,1,111765,PhD
+433,B.S. in Applied Mathematics,3,18,138896,BEng
+434,B.S. in Electrical Engineering,81,4,115340,MBA
+435,B.A. in Philosophy,69,23,82244,PhD
+436,B.B.A. in Finance,78,16,58236,MBA
+437,M.S. in Computer Science,1,7,99918,BS
+438,M.S. in Electrical and Computer Engineering,28,19,148876,BEng
+439,B.A. in Economics,78,10,111813,BS
+440,B.A. in Psychology,65,15,85093,MEng
+441,B.B.A. in Accounting,45,30,73320,PhD
+442,M.S. in Civil and Environmental Engineering,41,7,80858,BS
+443,M.S. in Mechanical Engineering,17,18,56663,MEng
+444,B.S. in Data Science,7,19,57314,BS
+445,B.A. in Linguistics,2,8,73381,MEng
+446,M.S. in Computer Science,73,30,120766,MBA
+447,MBA in Marketing,48,9,121960,PhD
+448,M.S. in Data Science,48,12,135876,MBA
+449,Ph.D. in Computer Science,1,25,148445,MEng
+450,M.S. in Industrial Engineering,7,16,98125,MBA
+451,M.S. in Electrical and Computer Engineering,77,11,61530,BS
+452,B.A. in Psychology,25,7,132572,MEng
+453,B.A. in Philosophy,24,25,84331,MBA
+454,B.S. in Electrical Engineering,29,27,87685,MBA
+455,B.A. in Sociology,57,22,73790,PhD
+456,M.S. in Electrical and Computer Engineering,78,5,96872,MBA
+457,Ph.D. in Economics,9,10,86080,MBA
+458,B.B.A. in Marketing,80,20,90668,MS
+459,B.S. in Data Science,69,21,113367,MEng
+460,M.S. in Civil and Environmental Engineering,9,21,115831,BEng
+461,B.S. in Environmental Engineering,78,23,75226,PhD
+462,MBA in Entrepreneurship,71,28,56996,PhD
+463,B.A. in Economics,63,15,147228,BS
+464,M.S. in Data Science,36,16,120333,PhD
+465,M.Eng. in Materials Science,81,29,62414,MEng
+466,M.Eng. in Mechanical Engineering,40,3,130484,MS
+467,B.S. in Electrical Engineering,6,22,133874,BEng
+468,Ph.D. in Psychology,78,10,146716,PhD
+469,M.S. in Civil and Environmental Engineering,41,9,75717,MS
+470,B.A. in Sociology,15,3,93533,MBA
+471,B.S. in Materials Science and Engineering,49,30,126372,MEng
+472,Ph.D. in Economics,37,2,115263,MBA
+473,M.S. in Business Analytics,36,12,148800,MEng
+474,B.A. in Philosophy,5,22,112973,BS
+475,MBA in Marketing,29,23,120985,MS
+476,Ph.D. in Electrical Engineering,12,9,110296,MBA
+477,M.S. in Civil and Environmental Engineering,76,8,138458,MS
+478,B.A. in International Relations,56,9,77269,MS
+479,M.S. in Statistics,34,7,127913,BEng
+480,MBA in Operations Management,45,15,120223,PhD
+481,B.S. in Applied Mathematics,51,14,119750,MS
+482,M.S. in Civil and Environmental Engineering,25,20,133769,MBA
+483,B.S. in Materials Science and Engineering,23,3,104573,BEng
+484,B.B.A. in Finance,22,12,83681,BEng
+485,B.S. in Environmental Engineering,33,19,142382,BEng
+486,M.S. in Computer Science,54,23,115673,PhD
+487,M.S. in Industrial Engineering,26,12,67457,MEng
+488,Ph.D. in Psychology,48,8,116565,PhD
+489,B.S. in Biomedical Engineering,8,14,74866,BS
+490,B.A. in Economics,76,13,139172,MBA
+491,B.S. in Civil Engineering,75,28,117769,PhD
+492,B.B.A. in Marketing,71,26,112366,MEng
+493,MBA in Operations Management,11,20,53584,BS
+494,Ph.D. in Electrical Engineering,45,9,95235,MS
+495,B.S. in Computer Science,9,26,130485,MS
+496,M.S. in Computer Science,24,1,145219,MEng
+497,B.A. in Economics,57,9,79956,PhD
+498,B.S. in Industrial Engineering,54,11,50724,MS
+499,M.S. in Industrial Engineering,21,7,118281,MBA
+500,MBA in Marketing,21,29,112649,MEng
+501,M.S. in Industrial Engineering,57,19,111547,PhD
+502,Ph.D. in Computer Science,11,17,50289,BEng
+503,B.S. in Environmental Engineering,66,16,61814,BS
+504,Ph.D. in Psychology,48,13,123472,BS
+505,B.A. in Linguistics,33,12,116203,PhD
+506,B.S. in Environmental Engineering,52,23,80986,BEng
+507,B.S. in Industrial Engineering,31,15,123433,MBA
+508,B.S. in Materials Science and Engineering,72,28,96600,PhD
+509,B.S. in Environmental Engineering,47,16,126866,MS
+510,M.S. in Statistics,32,8,98674,BEng
+511,B.A. in Psychology,63,20,127955,MBA
+512,B.A. in Linguistics,52,13,131513,MS
+513,B.A. in Psychology,78,9,55622,MBA
+514,B.B.A. in Marketing,7,6,82286,PhD
+515,M.Eng. in Electrical Engineering,23,16,127628,PhD
+516,M.S. in Business Analytics,28,7,127105,PhD
+517,Ph.D. in Computer Science,64,22,106804,PhD
+518,B.S. in Industrial Engineering,70,5,66697,MEng
+519,M.S. in Industrial Engineering,53,21,98628,PhD
+520,B.B.A. in Marketing,8,2,127949,BEng
+521,M.S. in Civil and Environmental Engineering,48,26,52024,MS
+522,B.S. in Computer Science,32,30,57108,MBA
+523,B.A. in Psychology,30,24,91544,MS
+524,Ph.D. in Electrical Engineering,29,12,110481,BS
+525,B.S. in Environmental Engineering,19,21,96031,BEng
+526,B.S. in Electrical Engineering,54,11,61223,BEng
+527,B.S. in Data Science,57,20,111925,BEng
+528,B.S. in Biomedical Engineering,30,2,112669,MEng
+529,M.S. in Industrial Engineering,10,3,73026,MS
+530,B.A. in Sociology,17,8,113786,MEng
+531,M.Eng. in Mechanical Engineering,42,26,56779,BS
+532,B.S. in Applied Mathematics,62,22,110373,BEng
+533,B.A. in International Relations,80,7,52823,MS
+534,M.S. in Finance,42,16,99284,PhD
+535,B.A. in Philosophy,14,11,94151,PhD
+536,M.S. in Industrial Engineering,74,19,88999,BS
+537,B.S. in Materials Science and Engineering,64,6,145031,BS
+538,Ph.D. in Electrical Engineering,28,2,116125,BEng
+539,Ph.D. in Electrical Engineering,58,23,127192,BS
+540,M.S. in Electrical and Computer Engineering,3,7,67308,BEng
+541,B.B.A. in Accounting,58,12,79028,MBA
+542,B.A. in Philosophy,29,15,125863,BEng
+543,B.A. in International Relations,3,19,61246,PhD
+544,Ph.D. in Mechanical Engineering,81,25,109804,PhD
+545,B.S. in Industrial Engineering,74,13,88282,MBA
+546,M.Eng. in Mechanical Engineering,63,18,99103,PhD
+547,Ph.D. in Economics,40,28,66127,BS
+548,B.S. in Electrical Engineering,35,7,140221,MBA
+549,M.S. in Business Analytics,54,30,93885,MS
+550,M.S. in Statistics,56,25,114899,MS
+551,M.Eng. in Mechanical Engineering,61,1,113903,MEng
+552,B.S. in Mechanical Engineering,49,24,57055,MS
+553,B.A. in International Relations,38,3,107700,BEng
+554,B.S. in Data Science,60,11,64572,PhD
+555,B.S. in Mechanical Engineering,7,5,61229,MEng
+556,M.S. in Industrial Engineering,75,7,106886,MEng
+557,B.S. in Data Science,59,6,114000,MS
+558,M.Eng. in Mechanical Engineering,32,29,105190,BS
+559,B.S. in Mechanical Engineering,42,3,128461,MEng
+560,B.B.A. in Accounting,72,6,110174,BEng
+561,B.S. in Electrical Engineering,80,28,137760,BEng
+562,M.Eng. in Electrical Engineering,26,4,72877,BEng
+563,Ph.D. in Economics,64,14,130453,MBA
+564,B.S. in Materials Science and Engineering,74,1,133335,PhD
+565,MBA in Strategic Management,30,26,97263,BS
+566,B.A. in International Relations,39,2,62368,BS
+567,MBA in Operations Management,80,17,88646,BS
+568,M.S. in Civil and Environmental Engineering,31,27,79529,BEng
+569,B.S. in Biomedical Engineering,68,5,127279,BEng
+570,B.S. in Biomedical Engineering,68,4,76013,MBA
+571,B.B.A. in Marketing,69,12,51883,MBA
+572,B.A. in Linguistics,59,24,144494,PhD
+573,B.B.A. in Marketing,10,11,91026,MBA
+574,B.S. in Data Science,19,10,148682,BS
+575,M.S. in Electrical and Computer Engineering,40,17,94544,BEng
+576,M.S. in Business Analytics,56,21,126854,BEng
+577,B.S. in Materials Science and Engineering,51,18,107440,MS
+578,B.S. in Civil Engineering,8,2,89748,BEng
+579,B.B.A. in Finance,76,20,60950,BS
+580,M.Eng. in Mechanical Engineering,44,9,84710,MEng
+581,M.Eng. in Mechanical Engineering,30,1,78369,MEng
+582,M.S. in Statistics,75,18,133261,MBA
+583,MBA in Operations Management,78,30,76314,BS
+584,B.A. in History,63,13,142964,BS
+585,M.S. in Civil and Environmental Engineering,46,15,131582,BS
+586,B.A. in Communication Studies,73,23,146381,MS
+587,M.S. in Mechanical Engineering,51,26,76351,PhD
+588,B.S. in Data Science,18,23,111642,PhD
+589,B.A. in International Relations,7,19,118497,MBA
+590,B.S. in Mechanical Engineering,21,22,132828,MBA
+591,B.A. in Economics,55,23,93022,MS
+592,MBA in Entrepreneurship,3,24,60315,PhD
+593,B.S. in Civil Engineering,72,17,57698,MS
+594,Ph.D. in Computer Science,61,17,59902,PhD
+595,B.S. in Mechanical Engineering,77,6,127096,MEng
+596,B.A. in Psychology,74,9,89172,BEng
+597,B.B.A. in Marketing,40,18,81881,MEng
+598,B.S. in Biomedical Engineering,5,20,110597,BEng
+599,B.A. in Economics,75,13,55873,MBA
+600,M.S. in Business Analytics,66,25,87097,PhD
+601,B.B.A. in Supply Chain Management,67,4,70996,BS
+602,M.S. in Statistics,23,17,51339,PhD
+603,Ph.D. in Computer Science,58,3,111219,PhD
+604,B.S. in Biomedical Engineering,44,26,79060,MBA
+605,B.S. in Computer Science,63,20,116954,MS
+606,MBA in Entrepreneurship,40,20,100005,PhD
+607,B.A. in International Relations,46,29,62104,MBA
+608,B.S. in Data Science,12,30,97986,BS
+609,B.B.A. in Supply Chain Management,62,19,57953,BS
+610,B.S. in Applied Mathematics,7,7,85098,BEng
+611,M.S. in Electrical and Computer Engineering,21,26,92945,BEng
+612,B.S. in Computer Science,3,30,105578,MBA
+613,B.B.A. in Marketing,66,11,88239,BEng
+614,M.Eng. in Electrical Engineering,27,3,95415,MEng
+615,MBA in Strategic Management,55,16,103928,MEng
+616,B.S. in Civil Engineering,73,7,121016,BS
+617,B.S. in Data Science,44,4,69069,MS
+618,B.A. in Psychology,80,11,90936,MS
+619,B.A. in Communication Studies,43,6,122378,BS
+620,B.S. in Applied Mathematics,65,28,114717,MBA
+621,M.S. in Data Science,7,16,127302,MBA
+622,B.S. in Applied Mathematics,79,17,142749,PhD
+623,B.A. in Linguistics,62,5,83632,MEng
+624,MBA in Strategic Management,81,26,96657,MEng
+625,B.S. in Industrial Engineering,1,14,75921,MBA
+626,Ph.D. in Economics,41,5,118674,MBA
+627,MBA in Operations Management,66,12,68666,BS
+628,Ph.D. in Economics,11,27,137769,MS
+629,B.A. in Philosophy,22,19,118392,PhD
+630,Ph.D. in Electrical Engineering,72,30,97287,MS
+631,B.B.A. in Accounting,5,22,127612,MS
+632,B.A. in Psychology,27,17,123086,MBA
+633,Ph.D. in Computer Science,21,6,90688,PhD
+634,B.B.A. in Supply Chain Management,74,14,134870,BEng
+635,M.S. in Data Science,32,4,143074,BEng
+636,M.Eng. in Materials Science,39,15,88695,MBA
+637,B.A. in Linguistics,9,3,99333,BEng
+638,M.S. in Statistics,80,21,97024,MBA
+639,Ph.D. in Psychology,11,4,59468,BEng
+640,B.B.A. in Supply Chain Management,16,14,58324,PhD
+641,MBA in Marketing,48,2,78880,PhD
+642,M.S. in Finance,45,17,65982,BS
+643,M.S. in Finance,72,13,73469,PhD
+644,B.S. in Biomedical Engineering,72,26,64890,MBA
+645,Ph.D. in Computer Science,38,5,106009,MS
+646,B.B.A. in Supply Chain Management,21,27,121528,MS
+647,B.B.A. in Marketing,75,19,107229,MS
+648,Ph.D. in Mechanical Engineering,51,15,140929,PhD
+649,Ph.D. in Computer Science,66,19,85067,BEng
+650,B.A. in Sociology,18,27,50367,BS
+651,B.B.A. in Supply Chain Management,32,16,62220,MEng
+652,M.Eng. in Mechanical Engineering,8,22,122820,MS
+653,B.S. in Mechanical Engineering,53,18,124394,BEng
+654,MBA in Entrepreneurship,49,28,70343,MBA
+655,B.S. in Materials Science and Engineering,67,7,112020,MS
+656,B.A. in Communication Studies,41,29,138879,MBA
+657,B.A. in Economics,11,19,113031,BS
+658,M.Eng. in Mechanical Engineering,4,27,119716,BEng
+659,B.B.A. in Accounting,1,10,76162,MEng
+660,B.B.A. in Finance,78,15,130835,MBA
+661,M.Eng. in Materials Science,68,16,130008,MEng
+662,MBA in Entrepreneurship,36,9,72434,MS
+663,M.S. in Electrical and Computer Engineering,68,10,110493,MEng
+664,Ph.D. in Psychology,7,3,110621,PhD
+665,B.B.A. in Finance,67,11,135959,MBA
+666,Ph.D. in Computer Science,7,23,107632,MEng
+667,Ph.D. in Psychology,4,25,146891,MBA
+668,B.A. in Economics,11,9,126191,MS
+669,B.B.A. in Finance,72,9,94744,MS
+670,M.S. in Industrial Engineering,54,3,74776,BEng
+671,B.S. in Industrial Engineering,39,14,111987,BS
+672,M.S. in Mechanical Engineering,48,8,129306,MEng
+673,Ph.D. in Psychology,16,17,76268,MS
+674,B.S. in Computer Science,67,17,101065,MS
+675,B.A. in Philosophy,5,16,57350,BEng
+676,M.S. in Computer Science,4,13,128280,BEng
+677,M.Eng. in Electrical Engineering,43,1,59034,BS
+678,M.S. in Civil and Environmental Engineering,33,15,148439,BS
+679,M.Eng. in Mechanical Engineering,9,1,96245,MEng
+680,MBA in Marketing,43,21,103361,MS
+681,B.S. in Data Science,20,15,51461,MBA
+682,MBA in Strategic Management,53,15,79024,MBA
+683,M.S. in Statistics,78,10,50362,BEng
+684,Ph.D. in Electrical Engineering,43,27,93894,BS
+685,B.S. in Biomedical Engineering,45,22,57121,BEng
+686,B.A. in Linguistics,30,30,112188,MBA
+687,B.B.A. in Accounting,44,1,145652,MS
+688,B.S. in Environmental Engineering,9,2,133002,MEng
+689,B.A. in History,50,6,73286,MS
+690,M.S. in Statistics,40,18,111414,BEng
+691,Ph.D. in Mechanical Engineering,46,11,53615,MEng
+692,B.S. in Data Science,29,4,54897,BS
+693,B.S. in Mechanical Engineering,75,22,126579,PhD
+694,B.A. in Philosophy,11,16,58881,BS
+695,B.B.A. in Marketing,45,28,135270,BS
+696,B.S. in Data Science,22,29,140646,PhD
+697,B.S. in Civil Engineering,76,10,56036,BS
+698,M.S. in Computer Science,23,3,103375,PhD
+699,Ph.D. in Computer Science,10,18,99192,PhD
+700,B.S. in Mechanical Engineering,24,26,137886,BS
+701,Ph.D. in Electrical Engineering,59,16,98059,MBA
+702,M.S. in Finance,25,14,58221,MBA
+703,B.S. in Computer Science,25,28,103193,MBA
+704,M.S. in Statistics,64,12,111776,BS
+705,B.S. in Materials Science and Engineering,44,11,58473,BEng
+706,B.S. in Data Science,42,5,64889,PhD
+707,M.S. in Mechanical Engineering,81,24,81658,PhD
+708,Ph.D. in Computer Science,37,9,111465,PhD
+709,B.A. in Linguistics,36,2,67246,MBA
+710,B.S. in Materials Science and Engineering,24,17,108573,PhD
+711,M.S. in Statistics,67,24,65548,MEng
+712,M.Eng. in Mechanical Engineering,45,16,61427,MS
+713,M.S. in Data Science,64,4,101459,BEng
+714,M.Eng. in Materials Science,6,21,117507,MBA
+715,MBA in Entrepreneurship,48,3,114873,PhD
+716,B.S. in Mechanical Engineering,67,20,101077,BS
+717,M.S. in Mechanical Engineering,9,10,75861,MBA
+718,B.S. in Data Science,74,18,53708,BS
+719,B.B.A. in Marketing,33,7,129864,MBA
+720,Ph.D. in Electrical Engineering,6,7,68972,MEng
+721,M.S. in Industrial Engineering,1,12,73963,PhD
+722,M.S. in Electrical and Computer Engineering,15,3,127474,BEng
+723,Ph.D. in Psychology,22,11,75549,MEng
+724,M.S. in Civil and Environmental Engineering,25,23,58469,BEng
+725,M.Eng. in Mechanical Engineering,63,18,149888,MS
+726,M.S. in Finance,63,30,149706,BS
+727,Ph.D. in Psychology,42,4,78782,PhD
+728,Ph.D. in Computer Science,53,1,65149,MEng
+729,B.S. in Industrial Engineering,6,8,116980,MS
+730,B.S. in Environmental Engineering,7,6,59500,PhD
+731,B.S. in Industrial Engineering,78,24,92728,MS
+732,Ph.D. in Economics,72,15,62222,BEng
+733,M.S. in Data Science,74,23,146757,MBA
+734,M.S. in Finance,61,26,86214,MS
+735,Ph.D. in Psychology,44,4,115567,BEng
+736,B.A. in International Relations,25,10,121664,MEng
+737,MBA in Entrepreneurship,79,3,129286,BS
+738,M.S. in Electrical and Computer Engineering,39,9,124764,MS
+739,B.A. in Psychology,48,24,85047,MEng
+740,B.A. in Linguistics,40,28,75725,BS
+741,B.S. in Computer Science,76,21,97075,MS
+742,B.S. in Applied Mathematics,60,3,79948,BEng
+743,M.S. in Industrial Engineering,78,17,132015,BS
+744,B.A. in Psychology,14,6,116476,MEng
+745,M.Eng. in Electrical Engineering,50,25,110341,BEng
+746,B.B.A. in Marketing,65,9,87173,MS
+747,B.S. in Applied Mathematics,29,1,134659,BS
+748,Ph.D. in Computer Science,49,26,81426,BEng
+749,B.B.A. in Supply Chain Management,78,9,110826,MEng
+750,B.A. in Philosophy,33,23,109013,PhD
+751,B.A. in Philosophy,49,14,69761,MBA
+752,B.S. in Civil Engineering,8,23,66351,BEng
+753,M.S. in Data Science,45,1,58884,BS
+754,B.B.A. in Supply Chain Management,54,25,103412,PhD
+755,B.B.A. in Accounting,73,26,88451,BEng
+756,M.S. in Computer Science,56,17,131165,MBA
+757,B.A. in Philosophy,43,29,115166,PhD
+758,Ph.D. in Computer Science,5,10,131462,MBA
+759,B.B.A. in Marketing,19,15,66307,MBA
+760,B.S. in Environmental Engineering,45,10,90430,MS
+761,Ph.D. in Economics,37,29,139546,BS
+762,M.S. in Business Analytics,69,5,124179,MEng
+763,MBA in Marketing,26,10,128643,MEng
+764,B.S. in Civil Engineering,20,22,111662,MBA
+765,B.B.A. in Finance,18,18,63513,PhD
+766,B.A. in Philosophy,80,16,110176,BEng
+767,B.B.A. in Marketing,44,29,145362,BEng
+768,M.Eng. in Electrical Engineering,44,23,114641,BEng
+769,M.S. in Civil and Environmental Engineering,81,5,101672,MS
+770,B.B.A. in Finance,12,7,129872,MBA
+771,M.S. in Computer Science,26,6,107174,PhD
+772,M.S. in Computer Science,55,14,131559,BEng
+773,M.S. in Computer Science,75,21,127293,MS
+774,B.S. in Mechanical Engineering,57,25,85087,MS
+775,B.B.A. in Supply Chain Management,19,21,104077,MEng
+776,B.A. in History,58,2,65460,MBA
+777,B.A. in Philosophy,52,17,68024,PhD
+778,B.S. in Mechanical Engineering,23,17,128471,BEng
+779,B.S. in Civil Engineering,14,3,117200,BS
+780,B.A. in International Relations,20,27,116325,BS
+781,B.S. in Mechanical Engineering,34,2,123112,BS
+782,B.A. in Communication Studies,19,12,148688,BEng
+783,B.A. in Sociology,28,28,104443,MBA
+784,M.S. in Electrical and Computer Engineering,49,29,128368,BS
+785,M.S. in Finance,36,5,53284,BS
+786,B.S. in Civil Engineering,72,20,113369,MS
+787,B.A. in Psychology,37,7,77247,BS
+788,Ph.D. in Electrical Engineering,61,12,129262,BS
+789,M.S. in Mechanical Engineering,31,25,148677,BS
+790,M.Eng. in Electrical Engineering,4,29,58475,BS
+791,B.S. in Civil Engineering,72,25,75945,MS
+792,B.A. in Linguistics,37,11,83454,BS
+793,B.A. in Linguistics,76,12,118874,MBA
+794,Ph.D. in Economics,41,7,100199,PhD
+795,B.B.A. in Supply Chain Management,56,27,142832,BEng
+796,Ph.D. in Economics,31,14,80306,MEng
+797,B.A. in Communication Studies,74,22,81064,BEng
+798,B.S. in Electrical Engineering,65,2,87375,MS
+799,M.S. in Mechanical Engineering,34,1,95507,BS
+800,B.A. in Economics,62,23,77746,MS
+801,Ph.D. in Mechanical Engineering,67,20,105826,PhD
+802,B.S. in Data Science,64,19,148215,PhD
+803,B.A. in Sociology,18,21,99729,MEng
+804,B.A. in Psychology,19,18,141356,BS
+805,MBA in Strategic Management,62,17,112024,BS
+806,B.A. in Psychology,32,29,67039,PhD
+807,B.B.A. in Supply Chain Management,59,29,78155,MS
+808,M.S. in Business Analytics,17,20,127618,BS
+809,B.B.A. in Supply Chain Management,75,21,118487,MEng
+810,M.S. in Electrical and Computer Engineering,48,4,132669,BS
+811,B.B.A. in Marketing,53,25,74004,MBA
+812,B.S. in Mechanical Engineering,38,16,54253,MS
+813,B.A. in International Relations,6,23,148629,PhD
+814,B.B.A. in Accounting,4,11,123922,BS
+815,M.S. in Mechanical Engineering,58,24,129001,MEng
+816,B.S. in Applied Mathematics,19,1,148499,MS
+817,B.A. in Sociology,6,14,131909,MEng
+818,Ph.D. in Electrical Engineering,35,18,97630,BS
+819,M.S. in Business Analytics,21,29,76053,BS
+820,M.S. in Mechanical Engineering,55,7,112708,MS
+821,B.S. in Environmental Engineering,60,30,93568,MBA
+822,MBA in Strategic Management,16,5,55102,MEng
+823,B.A. in Communication Studies,58,23,55386,MS
+824,MBA in Strategic Management,1,11,116036,PhD
+825,B.S. in Biomedical Engineering,68,28,129244,MEng
+826,MBA in Marketing,5,13,135229,MEng
+827,MBA in Strategic Management,30,13,90272,PhD
+828,B.B.A. in Supply Chain Management,64,13,119577,MS
+829,B.A. in History,33,9,128671,MBA
+830,B.S. in Data Science,47,12,97375,BEng
+831,B.A. in Psychology,13,23,67553,BEng
+832,M.S. in Mechanical Engineering,59,13,83547,BEng
+833,M.S. in Business Analytics,51,12,91903,MBA
+834,B.B.A. in Supply Chain Management,24,16,85546,MBA
+835,M.Eng. in Electrical Engineering,74,17,68051,MEng
+836,M.S. in Data Science,50,24,100157,MS
+837,M.S. in Mechanical Engineering,74,13,71646,MEng
+838,Ph.D. in Psychology,76,26,88583,PhD
+839,B.S. in Data Science,52,6,60633,MBA
+840,M.S. in Mechanical Engineering,74,21,68402,MEng
+841,MBA in Marketing,26,10,78706,MEng
+842,MBA in Entrepreneurship,6,16,108932,MEng
+843,B.A. in Psychology,22,9,63890,MBA
+844,Ph.D. in Economics,53,4,108592,BS
+845,B.S. in Data Science,43,8,116987,BS
+846,B.B.A. in Marketing,29,25,79035,BS
+847,Ph.D. in Economics,39,6,89642,BS
+848,B.A. in Linguistics,35,4,148035,MEng
+849,B.A. in Linguistics,68,17,88015,MS
+850,M.S. in Business Analytics,57,28,70772,MBA
+851,B.B.A. in Supply Chain Management,16,30,65658,PhD
+852,M.S. in Statistics,46,29,50508,MBA
+853,B.B.A. in Accounting,29,12,121666,MS
+854,Ph.D. in Economics,19,23,122867,MEng
+855,M.S. in Statistics,74,4,122719,MEng
+856,B.S. in Industrial Engineering,7,15,105688,BEng
+857,M.S. in Business Analytics,15,26,62041,MEng
+858,B.S. in Materials Science and Engineering,8,21,124680,BS
+859,M.S. in Mechanical Engineering,70,9,103951,BEng
+860,B.A. in Economics,8,16,58935,MBA
+861,B.S. in Environmental Engineering,70,24,144745,PhD
+862,B.B.A. in Accounting,37,20,104083,BEng
+863,MBA in Strategic Management,21,8,68257,BS
+864,B.A. in Economics,11,20,110100,MEng
+865,MBA in Marketing,72,27,149444,BEng
+866,M.Eng. in Mechanical Engineering,14,28,105450,MEng
+867,MBA in Marketing,46,28,94061,MBA
+868,B.S. in Applied Mathematics,33,19,57171,MS
+869,B.B.A. in Accounting,55,20,72132,MS
+870,MBA in Entrepreneurship,15,17,117838,BS
+871,M.S. in Mechanical Engineering,65,4,56564,BEng
+872,M.S. in Data Science,72,2,116813,MS
+873,B.S. in Materials Science and Engineering,13,23,77746,BS
+874,B.B.A. in Supply Chain Management,33,26,149334,BEng
+875,B.A. in Economics,24,6,102721,BS
+876,M.S. in Statistics,34,28,135019,MS
+877,MBA in Marketing,18,11,130751,MEng
+878,B.S. in Biomedical Engineering,44,23,96716,BEng
+879,B.S. in Materials Science and Engineering,22,27,148083,MS
+880,MBA in Entrepreneurship,57,27,133189,MS
+881,M.S. in Business Analytics,52,12,112013,BEng
+882,B.A. in History,55,21,53245,MS
+883,B.B.A. in Finance,74,20,134916,BEng
+884,B.A. in Philosophy,17,24,149277,MS
+885,B.S. in Electrical Engineering,16,18,80339,PhD
+886,M.S. in Statistics,42,3,84894,MBA
+887,B.B.A. in Supply Chain Management,47,13,64271,MEng
+888,M.S. in Electrical and Computer Engineering,79,14,139523,BS
+889,Ph.D. in Economics,67,28,58380,MEng
+890,Ph.D. in Electrical Engineering,40,13,117376,MEng
+891,Ph.D. in Mechanical Engineering,73,7,70788,BS
+892,B.S. in Data Science,18,7,142853,PhD
+893,B.A. in Economics,22,8,78544,BEng
+894,M.S. in Business Analytics,3,17,66202,MEng
+895,M.S. in Data Science,71,17,88249,MBA
+896,B.A. in Linguistics,17,5,55143,BS
+897,B.S. in Mechanical Engineering,13,29,93978,MS
+898,B.S. in Mechanical Engineering,69,12,127993,MS
+899,Ph.D. in Economics,19,28,94155,PhD
+900,M.S. in Electrical and Computer Engineering,28,4,60384,BS
+901,M.S. in Mechanical Engineering,29,18,138939,BS
+902,M.S. in Business Analytics,3,25,106736,MBA
+903,MBA in Marketing,5,16,75816,BS
+904,B.A. in History,12,18,59562,PhD
+905,B.S. in Computer Science,44,9,56092,BEng
+906,Ph.D. in Mechanical Engineering,19,20,65005,MS
+907,B.S. in Electrical Engineering,69,15,136749,BS
+908,MBA in Marketing,65,30,144473,MEng
+909,Ph.D. in Economics,8,30,54565,BS
+910,B.A. in History,40,29,66108,MEng
+911,M.S. in Industrial Engineering,78,20,91694,MS
+912,MBA in Operations Management,11,26,73453,MS
+913,M.S. in Electrical and Computer Engineering,37,25,142773,MBA
+914,B.B.A. in Marketing,5,20,67265,MEng
+915,B.A. in Psychology,63,30,78050,MBA
+916,B.S. in Biomedical Engineering,69,12,135233,BS
+917,B.B.A. in Marketing,28,28,125583,BEng
+918,B.S. in Applied Mathematics,32,9,85235,MEng
+919,B.B.A. in Finance,8,9,125565,MBA
+920,B.B.A. in Marketing,63,15,80045,PhD
+921,Ph.D. in Economics,42,10,63795,PhD
+922,Ph.D. in Electrical Engineering,58,23,57546,MBA
+923,B.A. in Communication Studies,30,6,141667,MEng
+924,MBA in Strategic Management,74,16,73595,MEng
+925,M.S. in Finance,31,23,62036,MBA
+926,Ph.D. in Computer Science,80,20,94873,BS
+927,B.A. in International Relations,46,1,128756,BEng
+928,Ph.D. in Economics,17,7,119912,BS
+929,M.S. in Business Analytics,22,22,87704,MS
+930,M.Eng. in Electrical Engineering,55,13,125086,PhD
+931,B.A. in Economics,74,29,120594,MEng
+932,Ph.D. in Psychology,46,21,128609,MBA
+933,B.A. in Philosophy,33,19,81182,PhD
+934,B.A. in Communication Studies,40,16,127153,MBA
+935,B.A. in Linguistics,1,29,75582,PhD
+936,B.A. in Linguistics,3,27,124671,MBA
+937,B.S. in Electrical Engineering,63,5,105691,MBA
+938,B.S. in Biomedical Engineering,43,29,147474,BEng
+939,M.S. in Data Science,45,28,134130,BS
+940,M.S. in Data Science,12,20,134348,MBA
+941,B.S. in Applied Mathematics,71,2,70324,PhD
+942,B.S. in Mechanical Engineering,79,3,137595,BEng
+943,B.B.A. in Finance,79,19,123591,BEng
+944,B.S. in Biomedical Engineering,3,2,87267,BEng
+945,B.S. in Data Science,23,15,68740,BS
+946,Ph.D. in Computer Science,31,9,56172,BS
+947,Ph.D. in Mechanical Engineering,4,3,123644,PhD
+948,B.S. in Data Science,41,3,81366,MEng
+949,M.Eng. in Mechanical Engineering,57,9,70546,PhD
+950,B.S. in Biomedical Engineering,19,7,78205,BEng
+951,B.S. in Computer Science,79,22,101083,MS
+952,B.S. in Data Science,42,10,70745,MS
+953,Ph.D. in Computer Science,69,22,57388,BS
+954,M.S. in Data Science,71,16,67532,MS
+955,B.A. in Sociology,42,17,56446,MBA
+956,Ph.D. in Mechanical Engineering,65,22,145602,MS
+957,B.B.A. in Finance,21,11,114262,PhD
+958,B.S. in Civil Engineering,3,24,51016,MBA
+959,B.A. in Linguistics,54,22,78588,MBA
+960,Ph.D. in Psychology,58,21,135318,BEng
+961,B.A. in Sociology,23,24,132411,PhD
+962,B.S. in Data Science,1,30,89241,MEng
+963,MBA in Strategic Management,67,5,67547,MS
+964,M.S. in Statistics,17,30,119137,MEng
+965,M.S. in Civil and Environmental Engineering,24,18,50294,PhD
+966,B.A. in Economics,23,15,72169,MBA
+967,MBA in Marketing,66,14,111524,BEng
+968,B.B.A. in Finance,41,12,74964,MS
+969,B.A. in International Relations,55,11,126667,BS
+970,B.S. in Computer Science,40,30,79132,BEng
+971,M.S. in Computer Science,43,21,146455,PhD
+972,MBA in Operations Management,46,21,118448,BS
+973,M.S. in Statistics,40,7,145218,MBA
+974,B.A. in History,3,5,62701,BS
+975,M.S. in Business Analytics,31,4,123075,BS
+976,M.S. in Statistics,62,8,70603,BEng
+977,M.S. in Civil and Environmental Engineering,28,24,76599,MEng
+978,M.S. in Electrical and Computer Engineering,49,29,149389,BEng
+979,B.B.A. in Accounting,28,17,94735,BS
+980,B.B.A. in Supply Chain Management,2,26,126824,BS
+981,M.S. in Business Analytics,33,21,120931,MBA
+982,B.B.A. in Marketing,13,15,68213,MBA
+983,B.A. in Psychology,46,17,100003,PhD
+984,B.S. in Mechanical Engineering,73,5,105877,PhD
+985,B.A. in Linguistics,78,25,104173,MBA
+986,B.S. in Applied Mathematics,34,24,114094,BEng
+987,M.S. in Civil and Environmental Engineering,56,18,108953,BEng
+988,Ph.D. in Mechanical Engineering,35,23,56623,MS
+989,Ph.D. in Electrical Engineering,24,1,98416,PhD
+990,B.A. in Linguistics,17,9,115371,MS
+991,B.S. in Biomedical Engineering,34,1,57148,MS
+992,MBA in Marketing,2,14,106901,BS
+993,B.S. in Civil Engineering,72,23,90647,BEng
+994,B.S. in Data Science,74,22,148749,BEng
+995,B.A. in Linguistics,2,24,133080,MBA
+996,Ph.D. in Mechanical Engineering,42,21,58695,BEng
+997,B.A. in Economics,75,10,65882,MBA
+998,B.A. in Psychology,16,29,144284,BS
+999,B.S. in Data Science,79,20,64936,PhD
+1000,M.S. in Finance,8,15,140274,PhD
+1001,B.S. in Industrial Engineering,77,19,99402,BS
