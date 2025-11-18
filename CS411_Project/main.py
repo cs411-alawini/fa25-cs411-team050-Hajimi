@@ -1,95 +1,106 @@
 import os
-from flask import Flask, jsonify, request, render_template_string
+from flask import Flask, jsonify, request, render_template_string, render_template
 import mysql.connector
 
 app = Flask(__name__)
 
+
+
 # -------------------------------
 # Database config
 # -------------------------------
-db_config = {
-    "host": os.environ.get("DB_HOST"),
-    "user": os.environ.get("DB_USER"),
-    "password": os.environ.get("DB_PASSWORD"),
-    "database": os.environ.get("DB_NAME"),
-}
+# db_config = {
+#     "host": os.environ.get("DB_HOST"),
+#     "user": os.environ.get("DB_USER"),
+#     "password": os.environ.get("DB_PASSWORD"),
+#     "database": os.environ.get("DB_NAME"),
+# }
 
 
+# def get_db_conn():
+#     return mysql.connector.connect(**db_config)
 def get_db_conn():
-    return mysql.connector.connect(**db_config)
+    return mysql.connector.connect(
+        host="136.111.138.100",       # 必须有
+        user="root",
+        password="1234qwer!@#$",
+        database="edu_connect",
+        port=3306,                         # 必须指定端口
+        use_pure=True                      # 强制 TCP，不要 named pipe
+    )
 
 
 # -------------------------------
 # Simple front page
 # -------------------------------
-INDEX_HTML = """
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Program Explorer</title>
-</head>
-<body>
-    <h1>Program Explorer (GCP + MySQL)</h1>
+# INDEX_HTML = """
+# <!DOCTYPE html>
+# <html>
+# <head>
+#     <meta charset="utf-8">
+#     <title>Program Explorer</title>
+# </head>
+# <body>
+#     <h1>Program Explorer (GCP + MySQL)</h1>
 
-    <h2>Search Programs by Major & Location</h2>
-    <p>
-        Major: <input id="majorInput" placeholder="e.g. Computer Science">
-        Location: <input id="locationInput" placeholder="e.g. IL">
-        <button onclick="search()">Search</button>
-    </p>
+#     <h2>Search Programs by Major & Location</h2>
+#     <p>
+#         Major: <input id="majorInput" placeholder="e.g. Computer Science">
+#         Location: <input id="locationInput" placeholder="e.g. IL">
+#         <button onclick="search()">Search</button>
+#     </p>
 
-    <table border="1" cellpadding="5" cellspacing="0">
-        <thead>
-            <tr>
-                <th>ProgramID</th>
-                <th>ProgramName</th>
-                <th>University</th>
-                <th>Location</th>
-                <th>Major</th>
-                <th>DegreeType</th>
-                <th>MedianSalary</th>
-            </tr>
-        </thead>
-        <tbody id="resultBody"></tbody>
-    </table>
+#     <table border="1" cellpadding="5" cellspacing="0">
+#         <thead>
+#             <tr>
+#                 <th>ProgramID</th>
+#                 <th>ProgramName</th>
+#                 <th>University</th>
+#                 <th>Location</th>
+#                 <th>Major</th>
+#                 <th>DegreeType</th>
+#                 <th>MedianSalary</th>
+#             </tr>
+#         </thead>
+#         <tbody id="resultBody"></tbody>
+#     </table>
 
-    <script>
-        async function search() {
-            const major = document.getElementById('majorInput').value;
-            const location = document.getElementById('locationInput').value;
-            const params = new URLSearchParams();
-            if (major) params.append('major', major);
-            if (location) params.append('location', location);
+#     <script>
+#         async function search() {
+#             const major = document.getElementById('majorInput').value;
+#             const location = document.getElementById('locationInput').value;
+#             const params = new URLSearchParams();
+#             if (major) params.append('major', major);
+#             if (location) params.append('location', location);
 
-            const res = await fetch('/api/programs/search?' + params.toString());
-            const data = await res.json();
+#             const res = await fetch('/api/programs/search?' + params.toString());
+#             const data = await res.json();
 
-            const tbody = document.getElementById('resultBody');
-            tbody.innerHTML = '';
-            data.forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${row.ProgramID}</td>
-                    <td>${row.ProgramName}</td>
-                    <td>${row.UniversityName}</td>
-                    <td>${row.Location}</td>
-                    <td>${row.MajorName}</td>
-                    <td>${row.DegreeType || ''}</td>
-                    <td>${row.MedianSalary || ''}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-    </script>
-</body>
-</html>
-"""
+#             const tbody = document.getElementById('resultBody');
+#             tbody.innerHTML = '';
+#             data.forEach(row => {
+#                 const tr = document.createElement('tr');
+#                 tr.innerHTML = `
+#                     <td>${row.ProgramID}</td>
+#                     <td>${row.ProgramName}</td>
+#                     <td>${row.UniversityName}</td>
+#                     <td>${row.Location}</td>
+#                     <td>${row.MajorName}</td>
+#                     <td>${row.DegreeType || ''}</td>
+#                     <td>${row.MedianSalary || ''}</td>
+#                 `;
+#                 tbody.appendChild(tr);
+#             });
+#         }
+#     </script>
+# </body>
+# </html>
+# """
 
 
 @app.route("/")
 def index():
-    return render_template_string(INDEX_HTML)
+    return render_template("index.html")
 
 
 # -------------------------------
@@ -123,10 +134,13 @@ def search_programs():
         base_sql += " AND u.Location = %s"
         params.append(location)
 
+    for i in params:
+        print(i)
     cursor.execute(base_sql, tuple(params))
     rows = cursor.fetchall()
     cursor.close()
     conn.close()
+    print(rows)
     return jsonify(rows)
 
 
@@ -365,4 +379,7 @@ def avg_salary_by_major():
 # -------------------------------
 if __name__ == "__main__":
     # 本地跑：python main.py
+    print("1")
+    print("ENV:", os.environ.get("DB_HOST"), os.environ.get("DB_USER"), os.environ.get("DB_PASSWORD"), os.environ.get("DB_NAME"))
+
     app.run(host="0.0.0.0", port=8080, debug=True)
