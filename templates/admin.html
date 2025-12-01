@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Program Admin</h1>
+        <p>Manage Programs (CRUD on Program table)</p>
+        <p style="margin-top:8px; font-size:13px;">
+            <a href="{{ url_for('index') }}" style="color:#93c5fd; text-decoration:none; margin-right:12px;">
+                ← Back to Search
+            </a>
+        </p>
+    </header>
+
+    <main>
+        <!-- Program 列表 -->
+        <section class="card">
+            <h2>All Programs</h2>
+            <div class="form-row">
+                <button onclick="loadAllPrograms()">Reload Programs</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median Salary</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody id="adminProgramTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- Program 编辑 / 新建表单 -->
+        <section class="card">
+            <h2>Edit / Create Program</h2>
+            <div class="form-row">
+                <label>
+                    Program ID:
+                    <input id="adminProgramIdInput" placeholder="(auto for new)" readonly>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    Name:
+                    <input id="adminProgramNameInput">
+                </label>
+                <label>
+                    UniversityID:
+                    <input id="adminUniversityIdInput" type="number">
+                </label>
+                <label>
+                    MajorID:
+                    <input id="adminMajorIdInput" type="number">
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    Degree Type:
+                    <input id="adminDegreeTypeInput" placeholder="e.g. BS, MS">
+                </label>
+                <label>
+                    Median Salary:
+                    <input id="adminMedianSalaryInput" type="number">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button onclick="createProgramAdmin()">Create New</button>
+                <button onclick="updateProgramAdmin()">Update Selected</button>
+                <button onclick="deleteProgramAdmin()">Delete Selected</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Status</h2>
+            <pre id="statusBox">Ready (admin).</pre>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        // 页面加载完自动拉一次列表
+        window.addEventListener('DOMContentLoaded', () => {
+            loadAllPrograms();
+        });
+    </script>
+</body>
+</html>

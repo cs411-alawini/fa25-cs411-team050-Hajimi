@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Program Explorer</h1>
+        <p>Search programs and manage bookmarks (GCP + Flask + MySQL)</p>
+        <p style="margin-top:8px; font-size:13px;">
+            <a href="{{ url_for('index') }}" style="color:#93c5fd; text-decoration:none; margin-right:12px;">
+                Search & Bookmarks
+            </a>
+            |
+            <a href="{{ url_for('admin') }}" style="color:#93c5fd; text-decoration:none; margin-left:12px;">
+                Admin: Manage Programs
+            </a>
+        </p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Search Programs</h2>
+
+            <div class="form-row">
+                <label>
+                    Keyword:
+                    <input id="keywordInput" placeholder="e.g. data, Illinois, UIUC">
+                </label>
+                <button onclick="keywordSearch()">Keyword Search</button>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    Major:
+                    <input id="majorInput" placeholder="e.g. Computer Science">
+                </label>
+                <label>
+                    Location:
+                    <input id="locationInput" placeholder="e.g. IL">
+                </label>
+                <label>
+                    Min Median Salary:
+                    <input id="minSalarySearchInput" type="number" placeholder="e.g. 70000">
+                </label>
+                <button onclick="searchPrograms()">Search by Major & Location</button>
+            </div>
+
+          
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Location</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median Salary</th>
+                        <th>Bookmark</th>
+                    </tr>
+                </thead>
+                <tbody id="programTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- 书签区域 -->
+        <section class="card">
+            <h2>User Bookmarks</h2>
+            <div class="form-row">
+                <label>
+                    UserID:
+                    <!-- 为简单起见，默认 1；你可以改成输入框 or 登录系统 -->
+                    <input id="userIdInput" value="1">
+                </label>
+                <button onclick="loadBookmarks()">Load Bookmarks</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median Salary</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="bookmarkTableBody"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Status</h2>
+            <pre id="statusBox">Ready.</pre>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
