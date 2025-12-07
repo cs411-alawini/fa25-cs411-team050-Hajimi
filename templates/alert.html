@@ -1,0 +1,32 @@
+<h1>User Alerts</h1>
+<button class="nav-btn" onclick="window.location.href='/'">Back to Home</button>
+
+<p><strong>Current User:</strong> <span id="alertUserDisplay"></span></p>
+
+<table class="comparison-table" id="alertTable">
+    <thead>
+        <tr>
+            <th>Message</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="alertTableBody"></tbody>
+</table>
+
+<script src="/static/app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const userId = localStorage.getItem("user_id");
+        const username = localStorage.getItem("username");
+
+        if (!userId) {
+            window.location.href = "/login";
+            return;
+        }
+
+        document.getElementById("alertUserDisplay").textContent =
+            `${username} (ID ${userId})`;
+
+        loadAlerts(userId);
+    });
+</script>
