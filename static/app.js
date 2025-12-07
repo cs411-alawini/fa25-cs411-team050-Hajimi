@@ -1,3 +1,18 @@
+// -------------------------------
+// get current user id from local storage or redirect to login
+// -------------------------------
+function getCurrentUserIdOrRedirect() {
+    const userId = localStorage.getItem("user_id");
+    if (!userId) {
+        window.location.href = "/login";
+        throw new Error("Not logged in");
+    }
+    return userId;
+}
+
+// -------------------------------
+// search programs by conditions
+// -------------------------------
 async function searchPrograms() {
     const major = document.getElementById('majorInput').value.trim();
     const location = document.getElementById('locationInput').value.trim();
@@ -31,8 +46,7 @@ function renderPrograms(programs) {
     const tbody = document.getElementById('programTableBody');
     tbody.innerHTML = '';
 
-    const userIdInput = document.getElementById('userIdInput');
-    const userId = userIdInput.value || '1';
+    const userId = getCurrentUserIdOrRedirect();
 
     programs.forEach(p => {
         const tr = document.createElement('tr');
@@ -54,6 +68,9 @@ function renderPrograms(programs) {
     });
 }
 
+// -------------------------------
+// Add bookmark
+// -------------------------------
 async function addBookmark(userId, programId) {
     setStatus(`Adding bookmark: user ${userId}, program ${programId}...`);
     try {
@@ -66,17 +83,18 @@ async function addBookmark(userId, programId) {
             })
         });
         const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'HTTP ' + res.status);
-        setStatus('Bookmark added: ' + JSON.stringify(data));
-        loadBookmarks(); 
+        if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+        setStatus('Bookmark added.');
+        loadBookmarks();
     } catch (err) {
         console.error(err);
         setStatus('Error adding bookmark: ' + err.message);
     }
 }
 
+
 async function loadBookmarks() {
-    const userId = document.getElementById('userIdInput').value || '1';
+    const userId = getCurrentUserIdOrRedirect();
     setStatus(`Loading bookmarks for user ${userId}...`);
 
     try {
@@ -84,12 +102,12 @@ async function loadBookmarks() {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
         renderBookmarks(data, userId);
-        setStatus(`Loaded ${data.length} bookmarks for user ${userId}.`);
     } catch (err) {
         console.error(err);
         setStatus('Error loading bookmarks: ' + err.message);
     }
 }
+
 
 function renderBookmarks(bookmarks, userId) {
     const tbody = document.getElementById('bookmarkTableBody');
@@ -135,6 +153,25 @@ async function removeBookmark(userId, programId) {
     }
 }
 
+async function clearAllBookmarks() {
+    const userId = getCurrentUserIdOrRedirect();
+    if (!confirm(`Clear ALL bookmarks for user ${userId}?`)) return;
+
+    try {
+        const res = await fetch(`/api/users/${userId}/bookmarks`, {
+            method: 'DELETE'
+        });
+        const data = await res.json();
+        setStatus(`Cleared ${data.deleted} bookmarks for user ${userId}.`);
+        loadBookmarks();
+    } catch (err) {
+        console.error(err);
+        setStatus('Error clearing bookmarks: ' + err.message);
+    }
+}
+
+
+// -------------------------------
 function setStatus(text) {
     const box = document.getElementById('statusBox');
     box.textContent = text;
@@ -163,6 +200,80 @@ async function keywordSearch() {
         setStatus('Error in keyword search: ' + err.message);
     }
 }
+
+// Clear Search Programs table
+function clearSearchResults() {
+    document.getElementById("programTableBody").innerHTML = "";
+    setStatus("Search results cleared.");
+}
+
+
+// --------------------------------------------------
+// New: Procedure -- RecommendProgramsForUser
+// --------------------------------------------------
+async function loadRecommendations() {
+    const userId = getCurrentUserIdOrRedirect();
+    const minSalary = document.getElementById('minSalaryInput').value;
+    const maxTuition = document.getElementById("maxTuitionInput").value;
+
+    setStatus(`Loading recommended programs for user ${userId}...`);
+
+    try {
+        const res = await fetch(
+            `/api/users/${userId}/recommend?min_salary=${minSalary}&max_tuition=${maxTuition}`
+        );
+
+        if (!res.ok) throw new Error("HTTP " + res.status);
+
+        const data = await res.json();
+        renderRecommendedPrograms(data);
+        setStatus(`Loaded ${data.length} recommended programs.`);
+    } catch (err) {
+        console.error(err);
+        setStatus("Error loading recommendations: " + err.message);
+    }
+}
+
+
+function renderRecommendedPrograms(programs) {
+    const tbody = document.getElementById('recommendedProgramsTableBody');
+    tbody.innerHTML = '';
+
+    const userId = getCurrentUserIdOrRedirect();
+
+    programs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${p.ProgramID}</td>
+            <td>${p.ProgramName}</td>
+            <td>${p.UniversityName}</td>
+            <td>${p.MajorName}</td>
+            <td>${p.DegreeType || ''}</td>
+            <td>${p.MedianSalary ?? ''}</td>
+            <td>${p.Tuition ?? ''}</td>
+            <td>${p.AvgTuitionForMajor ?? ''}</td>
+            <td>
+                <button onclick="addBookmark(${userId}, ${p.ProgramID})">
+                    +
+                </button>
+            </td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+
+// Clear Recommended Programs table
+function clearRecommendedResults() {
+    document.getElementById("recommendedProgramsTableBody").innerHTML = "";
+    setStatus("Recommended results cleared.");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("recommendBtn");
+    if (btn) btn.addEventListener("click", loadRecommendations);
+});
+
 
 
 // -------------------------------
@@ -209,7 +320,6 @@ async function selectProgramAdmin(programId) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const p = await res.json();
 
-        // 填充表单
         document.getElementById('adminProgramIdInput').value = p.ProgramID;
         document.getElementById('adminProgramNameInput').value = p.ProgramName || '';
         document.getElementById('adminUniversityIdInput').value = p.UniversityID || '';
@@ -253,7 +363,6 @@ async function createProgramAdmin() {
         if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
 
         setStatus('Program created: ' + JSON.stringify(data));
-        // 清空 ID，表示当前表单是“新建状态”
         document.getElementById('adminProgramIdInput').value = '';
         loadAllPrograms();
     } catch (err) {
@@ -325,7 +434,6 @@ async function deleteProgramAdmin() {
         if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
 
         setStatus('Program deleted.');
-        // 清空表单
         document.getElementById('adminProgramIdInput').value = '';
         document.getElementById('adminProgramNameInput').value = '';
         document.getElementById('adminUniversityIdInput').value = '';
@@ -339,4 +447,587 @@ async function deleteProgramAdmin() {
         setStatus('Error deleting program: ' + err.message);
     }
 }
+// -------------------------------
+// New: Compare Programs
+let selectedLeft = null;
+let selectedRight = null;
+
+async function searchCompare() {
+    const q = document.getElementById("compareSearchInput").value.trim();
+    if (!q) return;
+
+    const res = await fetch(`/api/programs/keyword-search?q=${encodeURIComponent(q)}`);
+    const data = await res.json();
+
+    let html = "<table><tr><th>Name</th><th>Action</th></tr>";
+    data.forEach(p => {
+        html += `<tr>
+                    <td>${p.ProgramName}</td>
+                    <td><button onclick="addToCompare(${p.ProgramID})">+ Compare</button></td>
+                 </tr>`;
+    });
+    html += "</table>";
+
+    document.getElementById("compareSearchResults").innerHTML = html;
+}
+
+async function addToCompare(programID) {
+    const res = await fetch(`/api/programs/${programID}`);
+    const p = await res.json();
+
+    const formatted = `
+        <p><b>${p.ProgramName}</b></p>
+        <p>Major: ${p.MajorName}</p>
+        <p>University: ${p.UniversityName}</p>
+        <p>Location: ${p.Location}</p>
+        <p>Degree: ${p.DegreeType}</p>
+        <p>Salary: ${p.MedianSalary}</p>
+    `;
+
+    if (!selectedLeft) {
+        selectedLeft = p.ProgramID;
+        document.getElementById("compareLeft").innerHTML = formatted;
+    } 
+    else if (!selectedRight) {
+        selectedRight = p.ProgramID;
+        document.getElementById("compareRight").innerHTML = formatted;
+    }
+
+    updateSaveButton();
+}
+
+async function saveComparison() {
+    const userId = getCurrentUserIdOrRedirect();
+    const note = document.getElementById("compareNote").value;
+
+    const res = await fetch("/api/comparisons", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            user_id: userId,
+            program1_id: selectedLeft,
+            program2_id: selectedRight,
+            note: note
+        })
+    });
+
+    const data = await res.json();
+    alert(data.status);
+
+    // reset UI
+    selectedLeft = null;
+    selectedRight = null;
+    document.getElementById("compareLeft").innerHTML = "";
+    document.getElementById("compareRight").innerHTML = "";
+    document.getElementById("compareNote").value = "";
+    updateSaveButton();
+
+    loadSavedComparisons();
+}
+
+function updateSaveButton() {
+    const btn = document.getElementById("saveCompareBtn");
+    btn.disabled = !(selectedLeft && selectedRight);
+}
+
+// Load saved comparisons for a user
+async function loadSavedComparisons() {
+    const userId = getCurrentUserIdOrRedirect();
+    const container = document.getElementById("savedComparisons");
+
+    try {
+        const res = await fetch(`/api/comparisons/${userId}`);
+        const data = await res.json();
+
+        if (!Array.isArray(data)) {
+            container.innerHTML = "<p>No comparisons found.</p>";
+            return;
+        }
+
+        let html = `
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Program 1</th>
+                    <th>Program 2</th>
+                    <th>Note</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+        `;
+
+        data.forEach(c => {
+            html += `
+                <tr>
+                    <td>${c.Program1Name}</td>
+                    <td>${c.Program2Name}</td>
+                    <td>${c.NoteFromUser || "(none)"}</td>
+                    <td><button class="delete-btn" onclick="deleteComparison(${c.ComparisonID})">Delete</button></td>
+                </tr>
+            `;
+        });
+
+        html += "</tbody></table>";
+        container.innerHTML = html;
+
+    } catch (err) {
+        console.error(err);
+        container.innerHTML = "<p>Error loading comparisons.</p>";
+    }
+}
+
+async function deleteComparison(id) {
+    if (!confirm("Delete this comparison?")) return;
+
+    const res = await fetch(`/api/comparisons/${id}`, { method: "DELETE" });
+    const data = await res.json();
+
+    if (res.ok) {
+        loadSavedComparisons();
+    } else {
+        alert(data.error);
+    }
+}
+
+
+
+function clearLeftProgram() {
+    selectedLeft = null;
+    document.getElementById("compareLeft").innerHTML = "";
+    updateSaveButton();
+}
+
+function clearRightProgram() {
+    selectedRight = null;
+    document.getElementById("compareRight").innerHTML = "";
+    updateSaveButton();
+}
+
+
+
+// Clear Comparison search results
+function clearCompareSearch() {
+    document.getElementById("compareSearchResults").innerHTML = "";
+    setStatus("Comparison search results cleared.");
+}
+
+// -------------------------------
+// Transaction: auto bookmark top N recommended programs
+// -------------------------------
+async function autoBookmarkTopN() {
+    const userId = getCurrentUserIdOrRedirect();
+    const minSalary = document.getElementById('minSalaryInput').value || 60000;
+    const topN = document.getElementById('autoBookmarkTopNInput').value || 5;
+
+    setStatus(`Running transaction: auto-bookmark top ${topN} programs for user ${userId}...`);
+
+    try {
+        const res = await fetch(`/api/users/${userId}/auto-bookmark`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                min_salary: Number(minSalary),
+                top_n: Number(topN)
+            })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+            throw new Error(data.error || ('HTTP ' + res.status));
+        }
+
+        setStatus(
+            `Transaction OK. Selected ${data.selected_count}, `
+            + `inserted ${data.inserted_count} bookmarks. `
+            + (data.avg_median_salary
+                ? `Avg median salary = ${data.avg_median_salary}.`
+                : '')
+        );
+
+        loadBookmarks();
+    } catch (err) {
+        console.error(err);
+        setStatus("Error in auto-bookmark transaction: " + err.message);
+    }
+}
+
+
+// -------------------------------
+// Navigate to Alert Page
+// -------------------------------
+function goToAlertPage() {
+    window.location.href = "/alert";
+}
+
+//-------------------------------
+// load alerts
+function renderAlerts(alerts, userId) {
+    const tbody = document.getElementById("alertTableBody");
+    tbody.innerHTML = "";
+
+    alerts.forEach(a => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${a.Message}</td>
+            <td>
+                <button class="delete-btn" onclick="deleteAlert(${userId}, ${a.AlertID})">
+                    Delete
+                </button>
+            </td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+
+async function loadAlerts(userId) {
+    try {
+        const res = await fetch(`/api/users/${userId}/alerts`);
+        const alerts = await res.json();
+        renderAlerts(alerts, userId);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+
+
+// -------------------------------
+// Delete alert
+async function deleteAlert(userId, alertId) {
+    const res = await fetch(`/api/users/${userId}/alerts/${alertId}`, {
+        method: "DELETE"
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+        alert("Alert deleted.");
+        loadAlerts(userId);
+    } else {
+        alert("Delete failed: " + data.error);
+    }
+}
+
+// -------------------------------
+// Search alerts by user
+function searchAlertsByUser() {
+    const userId = getCurrentUserIdOrRedirect();
+
+    if (!userId) {
+        alert("Please enter a valid User ID.");
+        return;
+    }
+
+    loadAlerts(userId);
+}
+
+// -------------------------------
+// log in page
+// -------------------------------
+function getCurrentUserIdOrRedirect() {
+    const userId = localStorage.getItem("user_id");
+    if (!userId) {
+        window.location.href = "/login";
+        throw new Error("Not logged in");
+    }
+    return userId;
+}
+
+async function login() {
+    const username = document.getElementById("loginUsername").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+    const statusElem = document.getElementById("loginStatus");
+
+    if (!username || !password) {
+        statusElem.textContent = "Please enter username and password.";
+        return;
+    }
+
+    try {
+        const res = await fetch("/api/login", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.status === "success") {
+            localStorage.setItem("user_id", data.user_id);
+            localStorage.setItem("username", data.username || username);
+
+            statusElem.style.color = "green";
+            statusElem.textContent = "Login successful! Redirecting...";
+
+            setTimeout(() => {
+                window.location.href = "/";
+            }, 800);
+        } else {
+            statusElem.style.color = "red";
+            statusElem.textContent = data.error || "Login failed.";
+        }
+    } catch (err) {
+        console.error(err);
+        statusElem.style.color = "red";
+        statusElem.textContent = "Login error: " + err.message;
+    }
+}
+
+function logout() {
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("username");
+    window.location.href = "/login";
+}
+
+/*
+user info functions
+*/
+async function loadUserInfo() {
+    const userId = getCurrentUserIdOrRedirect();
+    const container = document.getElementById("userInfoContainer");
+
+    try {
+        const res = await fetch(`/api/users/${userId}/info`);
+        const data = await res.json();
+
+        container.innerHTML = `
+            <p><strong>Username:</strong> ${data.Username}</p>
+            <p><strong>Email:</strong> ${data.Email}</p>
+            <p><strong>Preferred Major:</strong> ${data.PreferredMajor ?? "(none)"}</p>
+            <p><strong>Preferred Location:</strong> ${data.PreferredLocation ?? "(none)"}</p>
+            <p><strong>Preferred Job:</strong> ${data.PreferredJob ?? "(none)"}</p>
+        `;
+    } catch (err) {
+        container.innerHTML = "<p>Error loading user info.</p>";
+    }
+}
+
+async function changePassword() {
+    const userId = getCurrentUserIdOrRedirect();
+    const newPw = document.getElementById("newPasswordInput").value;
+
+    if (!newPw) {
+        alert("Enter a new password");
+        return;
+    }
+
+    const res = await fetch(`/api/users/${userId}/password`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ new_password: newPw })
+    });
+
+    if (res.ok) {
+        alert("Password updated successfully.");
+    } else {
+        alert("Unable to update password.");
+    }
+}
+
+async function loadMajorsAndJobs(selectedMajor, selectedJob) {
+    const majorSelect = document.getElementById("majorSelect");
+    const jobSelect = document.getElementById("jobSelect");
+
+    const majorRes = await fetch("/api/majors");
+    const majors = await majorRes.json();
+    majorSelect.innerHTML = majors.map(m =>
+        `<option value="${m.MajorID}" ${m.MajorID == selectedMajor ? "selected" : ""}>
+            ${m.MajorName}
+         </option>`
+    ).join("");
+
+    const jobRes = await fetch("/api/jobs");
+    const jobs = await jobRes.json();
+    jobSelect.innerHTML = jobs.map(j =>
+        `<option value="${j.JobID}" ${j.JobID == selectedJob ? "selected" : ""}>
+            ${j.JobTitle}
+         </option>`
+    ).join("");
+}
+
+async function startEditPreferences() {
+    const userId = getCurrentUserIdOrRedirect();
+
+    const res = await fetch(`/api/users/${userId}/info`);
+    const data = await res.json();
+
+    document.getElementById("editPrefSection").style.display = "block";
+
+    loadMajorsAndJobs(data.PreferredMajorID, data.PreferredJobID);
+}
+
+function cancelEditPreferences() {
+    document.getElementById("editPrefSection").style.display = "none";
+}
+
+async function savePreferences() {
+    const userId = getCurrentUserIdOrRedirect();
+    const majorId = document.getElementById("majorSelect").value;
+    const jobId = document.getElementById("jobSelect").value;
+
+    await fetch(`/api/users/${userId}/preferences`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            preferred_major: majorId,
+            preferred_job: jobId
+        })
+    });
+
+    alert("Preferences updated!");
+
+    document.getElementById("editPrefSection").style.display = "none";
+
+    loadUserInfo();
+}
+
+// New: Admin Transaction to update major-job links
+async function runMajorJobTransaction() {
+    const majorId = document.getElementById("txnMajorSelect").value;
+    const job1 = document.getElementById("txnJob1Select").value;
+    const job2 = document.getElementById("txnJob2Select").value;
+    const threshold = document.getElementById("txnThresholdInput").value || 15000;
+
+    if (!majorId || !job1 || !job2) {
+        setStatus("Please select Major, Job1 and Job2.");
+        return;
+    }
+
+    setStatus("Running...");
+
+    try {
+        const res = await fetch("/api/admin/update-major-jobs", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                major_id: Number(majorId),
+                job1: Number(job1),
+                job2: Number(job2),
+                threshold: Number(threshold)
+            })
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error);
+
+        // Status now only shows ONE line
+        setStatus("Transaction OK");
+
+        // Update Result Table
+        updateTxnResultTable(data);
+
+        // If switched, refresh Job1 list
+        loadMajorJobs(majorId);
+
+    } catch (err) {
+        setStatus("Error: " + err.message);
+    }
+}
+
+function updateTxnResultTable(data) {
+    const tbody = document.getElementById("txnResultBody");
+
+    const fmt = (v) => {
+        if (v === null || v === undefined) return "-";
+        const n = Number(v);
+        if (Number.isNaN(n)) return "-";
+        return n.toFixed(0);
+    };
+
+    tbody.innerHTML = `
+        <tr>
+            <td>${data.major && data.major.name ? data.major.name : "-"}</td>
+            <td>${data.job1 && data.job1.title ? data.job1.title : "-"}</td>
+            <td>${data.job2 && data.job2.title ? data.job2.title : "-"}</td>
+            <td>${fmt(data.major && data.major.avg_salary)}</td>
+            <td>${fmt(data.job1 && data.job1.avg_salary)}</td>
+            <td>${fmt(data.job2 && data.job2.avg_salary)}</td>
+            <td>${fmt(data.diff_major_job1)}</td>
+            <td>${data.switched ? "YES" : "NO"}</td>
+        </tr>
+    `;
+}
+
+
+
+
+async function loadMajorsForTransaction() {
+    const majorSelect = document.getElementById("txnMajorSelect");
+    const res = await fetch("/api/majors");
+    const data = await res.json();
+
+    majorSelect.innerHTML = data.map(m =>
+        `<option value="${m.MajorID}">${m.MajorName}</option>`
+    ).join("");
+}
+
+async function loadJobsForTransaction() {
+    const job2 = document.getElementById("txnJob2Select");
+
+    const res = await fetch("/api/jobs");
+    const data = await res.json();
+
+    const options = data.map(j =>
+        `<option value="${j.JobID}">${j.JobTitle}</option>`
+    ).join("");
+
+    job2.innerHTML = options;
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadMajorsForTransaction();
+    loadJobsForTransaction();
+
+    const majorSelect = document.getElementById("txnMajorSelect");
+    majorSelect.addEventListener("change", () => {
+        const majorId = majorSelect.value;
+        loadMajorJobs(majorId);
+    });
+
+    setTimeout(() => {
+        if (majorSelect.value) loadMajorJobs(majorSelect.value);
+    }, 200);
+});
+
+async function loadMajorJobs(majorId) {
+    const tbody = document.getElementById("majorJobsTableBody");
+    tbody.innerHTML = "<tr><td>Loading...</td></tr>";
+
+    const job1Select = document.getElementById("txnJob1Select");
+
+    try {
+        const res = await fetch(`/api/admin/major-jobs/${majorId}`);
+        const jobs = await res.json();
+
+        // Render current job list
+        tbody.innerHTML = "";
+        if (jobs.length === 0) {
+            tbody.innerHTML = `<tr><td>No jobs linked to this major.</td></tr>`;
+        } else {
+            jobs.forEach(j => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td>${j.JobTitle}</td>`;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // ALSO UPDATE Job1 dropdown (only jobs linked to this major)
+        job1Select.innerHTML =
+            jobs.map(j => `<option value="${j.JobID}">${j.JobTitle}</option>`).join("");
+
+    } catch (err) {
+        tbody.innerHTML = `<tr><td>Error loading jobs.</td></tr>`;
+        console.error(err);
+    }
+}
+
+
+
+
+
 
