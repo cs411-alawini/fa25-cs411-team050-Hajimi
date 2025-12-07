@@ -85,6 +85,75 @@
             <h2>Status</h2>
             <pre id="statusBox">Ready (admin).</pre>
         </section>
+
+        <!-- Advanced Transaction: Update Major–Job relationships -->
+        <section class="card">
+            <h2>Advanced Transaction: Update Major–Job Relations</h2>
+
+            <div class="form-row">
+                <label>
+                    Major:
+                    <select id="txnMajorSelect"></select>
+                </label>
+
+                <label>
+                    Job 1:
+                    <select id="txnJob1Select"></select>
+                </label>
+
+                <label>
+                    Job 2:
+                    <select id="txnJob2Select"></select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button onclick="runMajorJobTransaction()">
+                    Run Transaction
+                </button>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    Threshold (|MajorAvg - Job1Avg|):
+                    <input id="txnThresholdInput" type="number" value="15000">
+                </label>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>Transaction Result Summary</h2>
+            <table id="txnResultTable">
+                <thead>
+                    <tr>
+                        <th>Major</th>
+                        <th>Job 1</th>
+                        <th>Job 2</th>
+                        <th>Avg Major Salary</th>
+                        <th>Avg Job1 Salary</th>
+                        <th>Avg Job2 Salary</th>
+                        <th>Difference</th>
+                        <th>Switched?</th>
+                    </tr>
+                </thead>
+                <tbody id="txnResultBody">
+                    <tr><td colspan="8">Run a transaction to see results</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h3>Current Jobs Linked to This Major</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                    </tr>
+                </thead>
+                <tbody id="majorJobsTableBody"></tbody>
+            </table>
+        </section>
+
     </main>
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>
