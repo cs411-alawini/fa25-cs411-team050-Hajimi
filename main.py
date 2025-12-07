@@ -863,103 +863,115 @@ def create_stored_procedures():
     cursor.execute("DROP PROCEDURE IF EXISTS RecommendProgramsForUser")
 
     create_sql = """
-    CREATE PROCEDURE RecommendProgramsForUser(
-        IN p_user_id INT,
-        IN p_max_tuition INT,
-        IN p_min_salary INT
-    )
-    mainBlock:BEGIN
-        DECLARE v_majorName VARCHAR(255);
-        DECLARE v_count INT DEFAULT 0;
+        DROP PROCEDURE IF EXISTS RecommendProgramsForUser;
+        DELIMITER $$
 
-        SELECT m.MajorName
-        INTO v_majorName
-        FROM User u
-        JOIN Major m ON m.MajorID = u.PreferredMajor
-        WHERE u.UserID = p_user_id
-        LIMIT 1;
+        CREATE PROCEDURE RecommendProgramsForUser(
+            IN p_user_id INT,
+            IN p_max_tuition INT,
+            IN p_min_salary INT
+        )
+        mainBlock:BEGIN
+            DECLARE v_majorName VARCHAR(255);
+            DECLARE v_count INT DEFAULT 0;
 
-        IF v_majorName IS NULL THEN
-            SELECT * FROM Program WHERE 1=0;
-            LEAVE mainBlock;
-        END IF;
+            SELECT m.MajorName
+            INTO v_majorName
+            FROM User u
+            JOIN Major m ON m.MajorID = u.PreferredMajor
+            WHERE u.UserID = p_user_id
+            LIMIT 1;
 
-        DROP TEMPORARY TABLE IF EXISTS TempBase;
-        CREATE TEMPORARY TABLE TempBase AS
-        SELECT 
-            p.ProgramID,
-            p.Name AS ProgramName,
-            m.MajorName,
-            u.Name AS UniversityName,
-            p.MedianSalary,
-            u.Tuition,
-            p.DegreeType,
+            IF v_majorName IS NULL THEN
+                SELECT * FROM Program WHERE 1=0;
+                LEAVE mainBlock;
+            END IF;
 
-            (
-                SELECT AVG(u2.Tuition)
-                FROM Program p2
-                JOIN University u2 ON u2.UniversityID = p2.UniversityID
-                WHERE p2.MajorID = p.MajorID
-            ) AS AvgTuitionForMajor
+            DROP TEMPORARY TABLE IF EXISTS TempBase;
+            CREATE TEMPORARY TABLE TempBase AS
+            SELECT 
+                p.ProgramID,
+                p.Name AS ProgramName,
+                m.MajorName,
+                u.Name AS UniversityName,
+                p.MedianSalary,
+                u.Tuition,
+                p.DegreeType,
 
-        FROM Program p
-        JOIN Major m ON m.MajorID = p.MajorID
-        JOIN University u ON u.UniversityID = p.UniversityID
-        WHERE m.MajorName = v_majorName
-        ORDER BY p.MedianSalary DESC;
+                (
+                    SELECT AVG(u2.Tuition)
+                    FROM Program p2
+                    JOIN University u2 ON u2.UniversityID = p2.UniversityID
+                    WHERE p2.MajorID = p.MajorID
+                ) AS AvgTuitionForMajor
 
-        SELECT COUNT(*) INTO v_count
-        FROM TempBase
-        WHERE Tuition <= p_max_tuition
-          AND MedianSalary >= p_min_salary;
+            FROM Program p
+            JOIN Major m ON m.MajorID = p.MajorID
+            JOIN University u ON u.UniversityID = p.UniversityID
+            WHERE m.MajorName = v_majorName
+            ORDER BY p.MedianSalary DESC;
 
-        IF v_count = 0 THEN
-
-            DROP TEMPORARY TABLE IF EXISTS TempResult;
-            CREATE TEMPORARY TABLE TempResult AS
-            (
-                SELECT * FROM TempBase
-                ORDER BY MedianSalary DESC
-                LIMIT 5
-            )
-            UNION
-            (
-                SELECT
-                    p.ProgramID,
-                    p.Name AS ProgramName,
-                    m.MajorName,
-                    u.Name AS UniversityName,
-                    p.MedianSalary,
-                    u.Tuition,
-                    p.DegreeType,
-                    NULL AS AvgTuitionForMajor    -- global fallback 不算平均学费
-                FROM Program p
-                JOIN Major m ON m.MajorID = p.MajorID
-                JOIN University u ON u.UniversityID = p.UniversityID
-                ORDER BY p.MedianSalary DESC
-                LIMIT 5
-            );
-
-            SELECT * FROM TempResult ORDER BY MedianSalary DESC;
-
-        ELSE
-            SELECT
-                ProgramID,
-                ProgramName,
-                UniversityName,
-                MajorName,
-                DegreeType,
-                MedianSalary,
-                Tuition,
-                AvgTuitionForMajor
+            SELECT COUNT(*) INTO v_count
             FROM TempBase
             WHERE Tuition <= p_max_tuition
-              AND MedianSalary >= p_min_salary
-            ORDER BY MedianSalary DESC;
+            AND MedianSalary >= p_min_salary;
 
-        END IF;
+            IF v_count = 0 THEN
 
-    END
+                DROP TEMPORARY TABLE IF EXISTS TempResult;
+                CREATE TEMPORARY TABLE TempResult AS
+                (
+                    SELECT * FROM TempBase
+                    ORDER BY MedianSalary DESC
+                    LIMIT 5
+                )
+                UNION
+                (
+                    SELECT
+                        p.ProgramID,
+                        p.Name AS ProgramName,
+                        m.MajorName,
+                        u.Name AS UniversityName,
+                        p.MedianSalary,
+                        u.Tuition,
+                        p.DegreeType,
+
+                        (
+                            SELECT AVG(u2.Tuition)
+                            FROM Program p2
+                            JOIN University u2 ON u2.UniversityID = p2.UniversityID
+                            WHERE p2.MajorID = p.MajorID
+                        ) AS AvgTuitionForMajor
+
+                    FROM Program p
+                    JOIN Major m ON m.MajorID = p.MajorID
+                    JOIN University u ON u.UniversityID = p.UniversityID
+                    ORDER BY p.MedianSalary DESC
+                    LIMIT 5
+                );
+
+                SELECT * FROM TempResult ORDER BY MedianSalary DESC;
+
+            ELSE
+                SELECT
+                    ProgramID,
+                    ProgramName,
+                    UniversityName,
+                    MajorName,
+                    DegreeType,
+                    MedianSalary,
+                    Tuition,
+                    AvgTuitionForMajor
+                FROM TempBase
+                WHERE Tuition <= p_max_tuition
+                AND MedianSalary >= p_min_salary
+                ORDER BY MedianSalary DESC;
+
+            END IF;
+
+        END$$
+        DELIMITER ;
+
     """
 
     cursor.execute(create_sql)
