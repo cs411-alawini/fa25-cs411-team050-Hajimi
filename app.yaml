@@ -1,0 +1,8 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  DB_HOST: "136.111.138.100"
+  DB_USER: "root"
+  DB_PASSWORD: "1234qwer!@#$"
+  DB_NAME: "cs411-new-db"
